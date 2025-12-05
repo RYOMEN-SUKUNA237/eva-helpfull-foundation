@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@import "tailwindcss";
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: radial-gradient(circle at top, #0f766e 0, #022c33 40%, #020617 100%);
+}
+
+.page-shell {
+  @apply relative min-h-screen;
+}
+
+.page-shell-main {
+  /* Extra bottom padding so the fixed footer (with large logo) does not overlap content */
+  @apply relative z-10 flex flex-col min-h-screen pb-64;
+}
+
+.animate-fade-slide {
+  animation: fade-slide 8s ease-in-out;
+}
+
+@keyframes fade-slide {
+  0% {
+    opacity: 0;
+    transform: scale(1.04) translateY(8px);
+  }
+  10% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.02) translateY(4px);
+  }
+}
+
+.glass-panel {
+  @apply rounded-3xl border border-white/15 bg-white/5 backdrop-blur-2xl shadow-[0_18px_45px_rgba(8,47,73,0.65)] transition-all duration-300 ease-out;
+  background-image: radial-gradient(circle at top left, rgba(248, 250, 252, 0.16), transparent 55%),
+    radial-gradient(circle at bottom right, rgba(15, 118, 110, 0.25), transparent 60%);
+  box-shadow:
+    0 22px 60px rgba(15, 23, 42, 0.85),
+    0 0 0 1px rgba(148, 163, 184, 0.25);
+}
+
+.glass-panel:hover {
+  transform: translateY(-4px) translateZ(0);
+  box-shadow:
+    0 26px 70px rgba(15, 23, 42, 0.95),
+    0 0 0 1px rgba(248, 250, 252, 0.4);
+  background-color: rgba(15, 23, 42, 0.35);
+}
+
+/* Scroll reveal animations */
+.reveal-section {
+  opacity: 0;
+  transform: translate3d(0, 24px, 0) scale(0.98);
+  transition:
+    opacity 700ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 700ms cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-section[data-direction="left"] {
+  transform: translate3d(-32px, 16px, 0) scale(0.98);
+}
+
+.reveal-section[data-direction="right"] {
+  transform: translate3d(32px, 16px, 0) scale(0.98);
+}
+
+.reveal-section.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translate3d(0, 18px, 0);
+  transition:
+    opacity 600ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 600ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.reveal-stagger.is-visible > * {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.reveal-stagger.is-visible > *:nth-child(1) {
+  transition-delay: 40ms;
+}
+
+.reveal-stagger.is-visible > *:nth-child(2) {
+  transition-delay: 90ms;
+}
+
+.reveal-stagger.is-visible > *:nth-child(3) {
+  transition-delay: 140ms;
+}
+
+.reveal-stagger.is-visible > *:nth-child(4) {
+  transition-delay: 190ms;
+}
+
+.reveal-stagger.is-visible > *:nth-child(5) {
+  transition-delay: 240ms;
+}
