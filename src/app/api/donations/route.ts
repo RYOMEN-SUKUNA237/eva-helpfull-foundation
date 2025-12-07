@@ -39,7 +39,8 @@ export async function POST(request: Request) {
   // show a proper thank-you message instead of raw JSON.
   if (accept.includes("text/html")) {
     const url = new URL("/donate?status=success", request.url);
-    return NextResponse.redirect(url);
+    // Use 303 so the browser turns the original POST into a GET on the new URL.
+    return NextResponse.redirect(url, { status: 303 });
   }
 
   return NextResponse.json({ ok: true });
