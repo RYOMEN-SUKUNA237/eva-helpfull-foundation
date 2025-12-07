@@ -1,12 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { Navbar } from "@/components/layout/Navbar";
 import { BackgroundScene } from "@/components/three/BackgroundScene";
+import { PhoneField } from "@/components/form/PhoneField";
 
 export default function DonatePage() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const statusParam = searchParams.get("status");
+    if (statusParam === "success") {
+      setStatus("success");
+      setMessage(
+        "Thank you for your generosity. Your pledge has been received and our team will contact you shortly with payment details."
+      );
+    }
+  }, [searchParams]);
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -23,7 +36,9 @@ export default function DonatePage() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Unable to submit donation");
       setStatus("success");
-      setMessage("Thank you for your generosity. We have received your pledge.");
+      setMessage(
+        "Thank you for your generosity. Your pledge has been received and our team will contact you shortly with payment details."
+      );
       form.reset();
     } catch (err: any) {
       setStatus("error");
@@ -46,7 +61,7 @@ export default function DonatePage() {
 
             {message && (
               <div
-                className={`mb-4 rounded-md border px-3 py-2 text-sm ${
+                className={`mb-4 rounded-md border px-3 py-3 text-sm ${
                   status === "success"
                     ? "border-emerald-400 bg-emerald-500/10 text-emerald-100"
                     : status === "error"
@@ -54,13 +69,26 @@ export default function DonatePage() {
                     : "border-slate-500 bg-slate-800/40 text-slate-100"
                 }`}
               >
-                {message}
+                <p>{message}</p>
+                {status === "success" && (
+                  <div className="mt-3 flex flex-wrap items-center gap-2 text-xs">
+                    <span className="text-emerald-100/80">
+                      We deeply appreciate your support and wish you well.
+                    </span>
+                    <a
+                      href="/"
+                      className="inline-flex items-center justify-center rounded-full border border-emerald-400/70 bg-emerald-500/20 px-3 py-1 font-medium text-emerald-50 hover:bg-emerald-500/30"
+                    >
+                      Go back to main page
+                    </a>
+                  </div>
+                )}
               </div>
             )}
 
             <form onSubmit={handleSubmit} className="space-y-4 text-sm sm:text-base">
-              <div className="grid gap-4 sm:grid-cols-2">
-                <div>
+              <div className="grid gap-4 sm:grid-cols-3">
+                <div className="sm:col-span-1">
                   <label className="block text-xs font-medium text-slate-100/80 mb-1">Full name</label>
                   <input
                     name="donor_name"
@@ -68,7 +96,7 @@ export default function DonatePage() {
                     className="w-full rounded-md border border-white/20 bg-black/20 px-3 py-2 text-sm outline-none focus:border-orange-400"
                   />
                 </div>
-                <div>
+                <div className="sm:col-span-1">
                   <label className="block text-xs font-medium text-slate-100/80 mb-1">Email address</label>
                   <input
                     name="email"
@@ -76,6 +104,9 @@ export default function DonatePage() {
                     required
                     className="w-full rounded-md border border-white/20 bg-black/20 px-3 py-2 text-sm outline-none focus:border-orange-400"
                   />
+                </div>
+                <div className="sm:col-span-1">
+                  <PhoneField />
                 </div>
               </div>
 

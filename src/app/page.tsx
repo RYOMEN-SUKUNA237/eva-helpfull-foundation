@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { BackgroundScene } from "@/components/three/BackgroundScene";
 import { Reveal } from "@/components/animation/Reveal";
+import { PhoneField } from "@/components/form/PhoneField";
 import {
   FiHeart,
   FiUsers,
@@ -84,7 +85,7 @@ export default function Home() {
             <Reveal as="div" direction="right">
               <a
                 href="#media"
-                className="flex-1 w-full max-w-xl glass-panel p-4 sm:p-6 lg:p-8 cursor-pointer hover:bg-white/10 transition-colors"
+                className="flex-1 w-full max-w-xl glass-panel p-4 sm:p-6 lg:p-8 cursor-pointer bg-black/30 hover:bg-black/40 transition-colors"
               >
                 <div className="grid grid-cols-2 gap-3 sm:gap-4">
                   <div className="col-span-2 aspect-[16/9] overflow-hidden rounded-xl border border-white/15 bg-black/30">
@@ -351,7 +352,7 @@ export default function Home() {
             >
               <div className="h-20 w-20 sm:h-24 sm:w-24 overflow-hidden rounded-full border border-white/20 bg-black/40">
                 <img
-                  src="/images/founder-professor-alain-isoh.jpg"
+                  src="/face_card_prof.jpg"
                   alt="Professor Alain Vilard Ndi Isoh"
                   className="h-full w-full object-cover"
                 />
@@ -466,8 +467,9 @@ export default function Home() {
             </div>
           </section>
 
-          {/* Media preview */}
-          <section className="max-w-6xl mx-auto space-y-6" id="media">
+          {/* Media preview */
+          }
+          <section className="max-w-6xl mx-auto space-y-6 glass-panel p-4 sm:p-6" id="media">
             <header className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
               <div className="space-y-2">
                 <h2 className="flex items-center gap-2 text-2xl sm:text-3xl font-semibold">
@@ -486,7 +488,7 @@ export default function Home() {
                 See more in full gallery
               </a>
             </header>
-            <div className="glass-panel p-4 sm:p-6">
+            <div className="rounded-2xl border border-white/10 bg-black/20 p-4 sm:p-6">
               <div className="grid gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
                 {[0, 1, 2, 3, 4, 5, 6, 7].map((i) => (
                   <div
@@ -526,8 +528,8 @@ export default function Home() {
                 method="post"
                 className="space-y-4 text-sm sm:text-base"
               >
-                <div className="grid gap-4 sm:grid-cols-2">
-                  <div>
+                <div className="grid gap-4 sm:grid-cols-3">
+                  <div className="sm:col-span-1">
                     <label className="block text-xs font-medium text-slate-100/80 mb-1">
                       Full name
                     </label>
@@ -537,7 +539,7 @@ export default function Home() {
                       className="w-full rounded-md border border-white/20 bg-black/20 px-3 py-2 text-sm outline-none focus:border-orange-400"
                     />
                   </div>
-                  <div>
+                  <div className="sm:col-span-1">
                     <label className="block text-xs font-medium text-slate-100/80 mb-1">
                       Email address
                     </label>
@@ -547,6 +549,9 @@ export default function Home() {
                       required
                       className="w-full rounded-md border border-white/20 bg-black/20 px-3 py-2 text-sm outline-none focus:border-orange-400"
                     />
+                  </div>
+                  <div className="sm:col-span-1">
+                    <PhoneField />
                   </div>
                 </div>
                 <div className="grid gap-4 sm:grid-cols-2">
