@@ -34,12 +34,21 @@ export const metadata: Metadata = {
     siteName: "Eva Helpful Foundation",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "/images/photo_1_2025-12-03_18-28-46.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Eva Helpful Foundation outreach program group photo",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Eva Helpful Foundation",
     description:
       "Eva Helpful Foundation – empowering communities through education, health, and social support across Africa.",
+    images: ["/images/photo_1_2025-12-03_18-28-46.jpg"],
   },
   icons: {
     icon: "/favicon.ico",
