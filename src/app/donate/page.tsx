@@ -1,12 +1,12 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { Navbar } from "@/components/layout/Navbar";
 import { BackgroundScene } from "@/components/three/BackgroundScene";
 import { PhoneField } from "@/components/form/PhoneField";
 
-export default function DonatePage() {
+function DonatePageInner() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
   const searchParams = useSearchParams();
@@ -152,5 +152,22 @@ export default function DonatePage() {
         </main>
       </div>
     </div>
+  );
+}
+
+export default function DonatePage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="page-shell">
+          <BackgroundScene />
+          <div className="page-shell-main flex items-center justify-center text-sm text-slate-100/80">
+            Loading donate page...
+          </div>
+        </div>
+      }
+    >
+      <DonatePageInner />
+    </Suspense>
   );
 }
