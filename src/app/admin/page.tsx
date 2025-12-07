@@ -46,13 +46,14 @@ export default function AdminDashboardPage() {
   const [uploadStatus, setUploadStatus] = useState<string>("");
 
   useEffect(() => {
-    if (!supabase) {
+    const client = supabase;
+    if (!client) {
       setLoadingUser(false);
       return;
     }
 
     const checkUser = async () => {
-      const { data } = await supabase.auth.getUser();
+      const { data } = await client.auth.getUser();
       const currentUser = data.user;
       if (!currentUser) {
         router.replace("/admin/login");
