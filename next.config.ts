@@ -14,6 +14,11 @@ const nextConfig: NextConfig = {
         destination: "/#about",
         permanent: true,
       },
+      {
+        source: "/academic-and-professional-profile-of-professor-alain-isoh",
+        destination: "/team/professor-alain-isoh",
+        permanent: true,
+      },
     ];
   },
 };
