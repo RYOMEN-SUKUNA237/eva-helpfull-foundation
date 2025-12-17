@@ -5,16 +5,25 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FiMapPin, FiPhone } from "react-icons/fi";
 
 export function Footer() {
-  const [atBottom, setAtBottom] = useState(false);
+  // 0 = compact, 1 = fully expanded based on how close we are to the bottom of the page
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
 
     const handleScroll = () => {
       const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
-      // Start expanding the footer slightly before the absolute bottom
-      const nearBottom = scrollTop + clientHeight >= scrollHeight - 300;
-      setAtBottom(nearBottom);
+      const distanceFromBottom = scrollHeight - (scrollTop + clientHeight);
+      const threshold = 260; // px from bottom where expansion begins
+
+      if (distanceFromBottom >= threshold) {
+        setProgress(0);
+        return;
+      }
+
+      const clamped = Math.max(0, Math.min(threshold, distanceFromBottom));
+      const next = 1 - clamped / threshold;
+      setProgress(next);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
@@ -25,9 +34,11 @@ export function Footer() {
   return (
     <footer className="fixed inset-x-0 bottom-0 z-30 border-t border-white/10 bg-teal-950/80 backdrop-blur">
       <div
-        className={`mx-auto max-w-6xl px-3 sm:px-4 lg:px-6 text-xs sm:text-sm text-slate-100/80 transition-all duration-500 ${
-          atBottom ? "py-2" : "py-1.5"
-        }`}
+        className="mx-auto max-w-6xl px-3 sm:px-4 lg:px-6 text-xs sm:text-sm text-slate-100/80 transition-all duration-300 ease-out"
+        style={{
+          paddingTop: 8 + progress * 4,
+          paddingBottom: 8 + progress * 4,
+        }}
       >
         {/* Compact bar (always visible) */}
         <div className="flex items-center justify-between text-[11px] sm:text-xs">
@@ -38,18 +49,32 @@ export function Footer() {
         </div>
 
         {/* Expanded info only when near bottom */}
-        {atBottom && (
+        {progress > 0 && (
           <>
             {/* Desktop/tablet: circular logo on top when expanded */}
-            <div className="mt-1 hidden w-full justify-center sm:flex">
+            <div
+              className="mt-1 hidden w-full justify-center sm:flex"
+              style={{
+                opacity: progress,
+                transform: `translateY(${(1 - progress) * 8}px)`,
+                transition: "opacity 200ms ease-out, transform 200ms ease-out",
+              }}
+            >
               <img
                 src="/photo_2025-12-05_09-47-34.jpg"
                 alt="Eva Helpful Foundation footer logo"
-                className="h-[200px] w-[200px] rounded-full object-cover"
+                className="h-[160px] w-[160px] rounded-full object-cover"
               />
             </div>
 
-            <div className="mt-1 flex flex-col gap-2 text-[11px] sm:text-xs sm:flex-row sm:items-center sm:justify-between">
+            <div
+              className="mt-1 flex flex-col gap-2 text-[11px] sm:text-xs sm:flex-row sm:items-center sm:justify-between"
+              style={{
+                opacity: progress,
+                transform: `translateY(${(1 - progress) * 6}px)`,
+                transition: "opacity 200ms ease-out, transform 200ms ease-out",
+              }}
+            >
               <div className="w-full sm:w-auto">
                 <div className="flex items-center justify-between gap-3 sm:block">
                   <div className="space-y-1">
@@ -62,7 +87,7 @@ export function Footer() {
                     <div className="flex items-center justify-start gap-2">
                       <FiPhone className="h-4 w-4 text-orange-300" />
                       <p>
-                        <span className="font-semibold">Phone 2:</span> (237) 676 37 70 4
+                        <span className="font-semibold">Phone 2:</span> (237) 676 37 70 43
                       </p>
                     </div>
                     <div className="flex items-center justify-start gap-2">
@@ -74,7 +99,7 @@ export function Footer() {
                   </div>
 
                   {/* Mobile: logo on the right, large and circular when expanded */}
-                  <div className="block sm:hidden h-[200px] w-[200px] overflow-hidden rounded-full">
+                  <div className="block sm:hidden h-[160px] w-[160px] overflow-hidden rounded-full">
                     <img
                       src="/photo_2025-12-05_09-47-34.jpg"
                       alt="Eva Helpful footer logo"

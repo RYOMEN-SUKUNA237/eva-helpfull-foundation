@@ -120,7 +120,7 @@ export default function ContactPage() {
                   <span className="font-semibold">Phone 1:</span> (237) 671 80 82 32
                 </p>
                 <p>
-                  <span className="font-semibold">Phone 2:</span> (237) 676 37 70 4
+                  <span className="font-semibold">Phone 2:</span> (237) 676 37 70 43
                 </p>
                 <p>
                   <span className="font-semibold">Address:</span> Nkofoulou, Entrée Wague, Soa

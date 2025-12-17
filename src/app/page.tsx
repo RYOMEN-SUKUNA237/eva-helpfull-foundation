@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import Link from "next/link";
 import { Navbar } from "@/components/layout/Navbar";
 import { BackgroundScene } from "@/components/three/BackgroundScene";
 import { Reveal } from "@/components/animation/Reveal";
@@ -13,6 +15,13 @@ import {
   FiSmile,
   FiGlobe,
 } from "react-icons/fi";
+import { DOCUMENTATIONS } from "@/data/documentations";
+
+export const metadata: Metadata = {
+  title: "Home",
+  description:
+    "Eva Helpful Foundation builds a generation grounded in values that protect the future, through values-based education, school partnerships, and community programs.",
+};
 
 export default function Home() {
   return (
@@ -32,15 +41,15 @@ export default function Home() {
               <p className="inline-flex items-center gap-2 text-sm font-medium text-orange-300 bg-orange-500/10 px-3 py-1 rounded-full border border-orange-400/40 w-fit">
                 Eva Helpful Foundation
               </p>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold leading-tight text-slate-50">
                 Building a generation
                 <span className="block text-orange-400">
                   grounded in values that protect the future.
                 </span>
               </h1>
               <p className="text-base sm:text-lg text-slate-100/80 max-w-xl">
-                We exist to restore positive values among children and adolescentsrespect, empathy,
-                honesty, and responsibilitybecause the future depends on the values we teach today.
+                We exist to restore positive values among children and adolescents – respect, empathy,
+                honesty, and responsibility – because the future depends on the values we teach today.
               </p>
               <div className="space-y-2 text-sm sm:text-base text-slate-100/85">
                 <h2 className="flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-orange-300">
@@ -48,7 +57,7 @@ export default function Home() {
                 </h2>
                 <p className="max-w-xl text-xs sm:text-sm text-slate-100/80">
                   Families are overwhelmed, schools focus mostly on academics, and communities have lost the
-                  trust that once protected children. This has created a dangerous value gapleading to
+                  trust that once protected children. This has created a dangerous value gap, leading to
                   rising violence, disrespect, and emotional instability among the young.
                 </p>
               </div>
@@ -121,7 +130,7 @@ export default function Home() {
           <Reveal as="section" className="max-w-6xl mx-auto space-y-8">
             <header className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
               <div>
-                <h2 className="text-2xl sm:text-3xl font-semibold">Our Focus Areas</h2>
+                <h2 className="text-2xl sm:text-3xl font-semibold text-slate-50">Our Focus Areas</h2>
                 <p className="mt-2 text-sm sm:text-base text-slate-100/80 max-w-2xl">
                   We design values-based programs that help young people develop
                   character, social skills, and confidence for life beyond the classroom.
@@ -173,7 +182,7 @@ export default function Home() {
           <Reveal as="section" className="max-w-6xl mx-auto space-y-6" id="blog">
             <header className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
               <div className="space-y-2">
-                <h2 className="text-2xl sm:text-3xl font-semibold">Stories from Eva Helpful</h2>
+                <h2 className="text-2xl sm:text-3xl font-semibold text-slate-50">Stories from Eva Helpful</h2>
                 <p className="max-w-3xl text-sm sm:text-base text-slate-100/80">
                   Reflections, program highlights, and practical ideas for parents, teachers, and
                   volunteers who want to nurture values in young people.
@@ -232,7 +241,7 @@ export default function Home() {
                 <p className="text-xs font-semibold tracking-[0.2em] uppercase text-orange-300">
                   About Us
                 </p>
-                <h2 className="text-2xl sm:text-3xl font-semibold">Eva Helpful Foundation</h2>
+                <h2 className="text-2xl sm:text-3xl font-semibold text-slate-50">Eva Helpful Foundation</h2>
                 <p className="max-w-3xl text-sm sm:text-base text-slate-100/80">
                   Eva Helpful is a values-driven, youth-focused organization officially registered under
                   Authorization No. 254/G.37/VOL1/SAAJP/3AP of 27 March 2025. We were founded to address the
@@ -303,7 +312,7 @@ export default function Home() {
                   <h3 className="text-lg font-semibold text-orange-300">Vision</h3>
                   <p className="text-slate-100/85">
                     To raise children and adolescents who embody compassion, respect, honesty, empathy,
-                    strong mental health, and responsible citizenshipwhile promoting sustainable living and
+                    strong mental health, and responsible citizenship, while promoting sustainable living and
                     care for the environment.
                   </p>
                 </div>
@@ -311,7 +320,7 @@ export default function Home() {
                   <h3 className="text-lg font-semibold text-orange-300">Mission</h3>
                   <p className="text-slate-100/85">
                     To nurture a generation rooted in positive values, emotional intelligence, ethical
-                    thinking, and community responsibilitystrengthening families, supporting schools, and
+                    thinking, and community responsibility, strengthening families, supporting schools, and
                     promoting national harmony through value-based education.
                   </p>
                 </div>
@@ -323,7 +332,7 @@ export default function Home() {
                   <ul className="list-disc space-y-1 pl-5 text-slate-100/85">
                     <li>Teach strong moral values and good character.</li>
                     <li>Promote mental and emotional well-being.</li>
-                    <li>Support research on childrens values and behavior.</li>
+                    <li>Support research on children’s values and behavior.</li>
                     <li>Equip children with social and community skills.</li>
                   </ul>
                 </div>
@@ -336,6 +345,56 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
+              <section className="mt-6 space-y-3">
+                <header className="space-y-1">
+                  <p className="text-xs font-semibold tracking-[0.2em] uppercase text-orange-300">
+                    Official Documents
+                  </p>
+                  <h3 className="text-lg sm:text-xl font-semibold text-slate-50">
+                    Eva Helpful Documentation Library
+                  </h3>
+                  <p className="text-xs sm:text-sm text-slate-100/80">
+                    A quick preview of key official documents. Tap a card to open the full PDF.
+                  </p>
+                </header>
+
+                <div className="grid gap-3 sm:grid-cols-2">
+                  {DOCUMENTATIONS.slice(0, 2).map((doc) => (
+                    <a
+                      key={doc.slug}
+                      href={`/documentations/${encodeURIComponent(doc.file)}`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="group block"
+                    >
+                      <article className="glass-panel flex items-center gap-3 p-4 sm:p-5 text-xs sm:text-sm group-hover:bg-white/10 transition-colors">
+                        <div className="flex h-16 w-14 sm:h-20 sm:w-16 flex-shrink-0 items-center justify-center rounded-md border border-white/25 bg-slate-900/70">
+                          <span className="text-[10px] sm:text-xs font-semibold text-orange-200">PDF</span>
+                        </div>
+                        <div className="space-y-1">
+                          <h4 className="text-[11px] sm:text-sm font-semibold text-slate-50">{doc.title}</h4>
+                          <p className="text-[11px] sm:text-[13px] text-slate-100/85 line-clamp-3">
+                            {doc.description}
+                          </p>
+                          <p className="mt-1 text-[10px] sm:text-[11px] text-slate-300/85">
+                            Click to open full view-only PDF in a new tab.
+                          </p>
+                        </div>
+                      </article>
+                    </a>
+                  ))}
+                </div>
+
+                <div className="pt-1">
+                  <Link
+                    href="/docs"
+                    className="inline-flex items-center text-[11px] sm:text-xs font-semibold text-orange-300 hover:text-orange-200"
+                  >
+                    View more documents
+                    <span className="ml-1 text-base leading-none">→</span>
+                  </Link>
+                </div>
+              </section>
             </div>
           </Reveal>
 
@@ -343,37 +402,155 @@ export default function Home() {
           <Reveal as="section" className="max-w-6xl mx-auto space-y-6" id="team">
             <header className="flex flex-col gap-2">
               <p className="text-xs font-semibold tracking-[0.2em] uppercase text-orange-300">Our Team</p>
-              <h2 className="text-2xl sm:text-3xl font-semibold">Leadership</h2>
+              <h2 className="text-2xl sm:text-3xl font-semibold text-slate-50">Leadership team</h2>
             </header>
 
-            <a
-              href="/team/professor-alain-isoh"
-              className="glass-panel flex flex-col items-center gap-3 p-5 sm:p-6 text-center hover:bg-white/10 transition-colors"
-            >
-              <div className="h-20 w-20 sm:h-24 sm:w-24 overflow-hidden rounded-full border border-white/20 bg-black/40">
-                <img
-                  src="/face_card_prof.jpg"
-                  alt="Professor Alain Vilard Ndi Isoh"
-                  className="h-full w-full object-cover"
-                />
-              </div>
-              <div className="space-y-1 text-sm sm:text-base">
-                <h3 className="text-base sm:text-lg font-semibold text-slate-50">
-                  Professor Alain Vilard Ndi Isoh
-                </h3>
-                <p className="text-xs sm:text-sm text-orange-200">
-                  Founder &amp; President, Eva Helpful Foundation
-                </p>
-              </div>
-            </a>
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {/* Founder */}
+              <a
+                href="/team/professor-alain-isoh"
+                className="glass-panel flex flex-col items-center gap-3 p-5 sm:p-6 text-center hover:bg-white/10 transition-colors"
+              >
+                <div className="h-20 w-20 sm:h-24 sm:w-24 overflow-hidden rounded-full border border-white/20 bg-black/40">
+                  <img
+                    src="/face_card_prof.jpg"
+                    alt="Professor Alain Vilard Ndi Isoh"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <div className="space-y-1 text-sm sm:text-base">
+                  <h3 className="text-base sm:text-lg font-semibold text-slate-50">
+                    Professor Alain Vilard Ndi Isoh
+                  </h3>
+                  <p className="text-xs sm:text-sm text-orange-200">
+                    Founder &amp; President, Eva Helpful Foundation
+                  </p>
+                  <p className="text-[11px] sm:text-xs text-slate-300/85">Country of residence: Cameroon</p>
+                </div>
+              </a>
+
+              {/* Vice President */}
+              <a
+                href="/team/awah-beltine-sirri"
+                className="glass-panel flex flex-col items-center gap-3 p-5 sm:p-6 text-center hover:bg-white/10 transition-colors"
+              >
+                <div className="h-20 w-20 sm:h-24 sm:w-24 overflow-hidden rounded-full border border-white/20 bg-black/40">
+                  <img
+                    src="/awah%20beltine.jpg"
+                    alt="Mrs. Awah Beltine Sirri"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <div className="space-y-1 text-sm sm:text-base">
+                  <h3 className="text-base sm:text-lg font-semibold text-slate-50">Mrs. Awah Beltine Sirri</h3>
+                  <p className="text-xs sm:text-sm text-orange-200">Vice President</p>
+                  <p className="text-[11px] sm:text-xs text-slate-300/85">Country of residence: Cameroon</p>
+                </div>
+              </a>
+
+              {/* Creative Director */}
+              <a
+                href="/team/ndi-brain-webje"
+                className="glass-panel flex flex-col items-center gap-3 p-5 sm:p-6 text-center hover:bg-white/10 transition-colors"
+              >
+                <div className="h-20 w-20 sm:h-24 sm:w-24 overflow-hidden rounded-full border border-white/20 bg-black/40">
+                  <img
+                    src="/ndi%20brain.jpg"
+                    alt="Mr. Ndi Brain Webje"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <div className="space-y-1 text-sm sm:text-base">
+                  <h3 className="text-base sm:text-lg font-semibold text-slate-50">Mr. Ndi Brain Webje</h3>
+                  <p className="text-xs sm:text-sm text-orange-200">
+                    Creative Director &amp; Lead Visual Communications Officer
+                  </p>
+                  <p className="text-[11px] sm:text-xs text-slate-300/85">Country of residence: Cameroon</p>
+                </div>
+              </a>
+
+              {/* Director of Grants Management and Audit */}
+              <a
+                href="/team/ndam-njoya-inusa"
+                className="glass-panel flex flex-col items-center gap-3 p-5 sm:p-6 text-center hover:bg-white/10 transition-colors"
+              >
+                <div className="h-20 w-20 sm:h-24 sm:w-24 overflow-hidden rounded-full border border-white/20 bg-black/40">
+                  <img
+                    src="/ndam%20njoya.jpg"
+                    alt="Ndam Njoya Inusa"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <div className="space-y-1 text-sm sm:text-base">
+                  <h3 className="text-base sm:text-lg font-semibold text-slate-50">NDAM NJOYA INUSA</h3>
+                  <p className="text-xs sm:text-sm text-orange-200">
+                    Director of Grants Management and Audit – Eva Helpful
+                  </p>
+                  <p className="text-[11px] sm:text-xs text-slate-300/85">Country of residence: Cameroon</p>
+                </div>
+              </a>
+
+              {/* Coordinator  Digital Communications and Protocol */}
+              <a
+                href="/team/levi-wam-mfua"
+                className="glass-panel flex flex-col items-center gap-3 p-5 sm:p-6 text-center hover:bg-white/10 transition-colors"
+              >
+                <div className="h-20 w-20 sm:h-24 sm:w-24 overflow-hidden rounded-full border border-white/20 bg-black/40">
+                  <img
+                    src="/lewi%20wam.png"
+                    alt="Levi Wam Mfua"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+                <div className="space-y-1 text-sm sm:text-base">
+                  <h3 className="text-base sm:text-lg font-semibold text-slate-50">Levi Wam Mfua</h3>
+                  <p className="text-xs sm:text-sm text-orange-200">
+                    Coordinator – Digital Communications and Protocol
+                  </p>
+                  <p className="text-[11px] sm:text-xs text-slate-300/85">Country of residence: Cameroon</p>
+                </div>
+              </a>
+
+              {/* Director of Research, Training and Capacity Building */}
+              <a
+                href="/team/ngoata-sylvanus-diangha"
+                className="glass-panel flex flex-col items-center gap-3 p-5 sm:p-6 text-center hover:bg-white/10 transition-colors"
+              >
+                <div className="h-20 w-20 sm:h-24 sm:w-24 overflow-hidden rounded-full border border-white/20 bg-black/40 flex items-center justify-center text-sm font-semibold text-slate-100/90">
+                  NS
+                </div>
+                <div className="space-y-1 text-sm sm:text-base">
+                  <h3 className="text-base sm:text-lg font-semibold text-slate-50">Dr. Ngoata Sylvanus Diangha</h3>
+                  <p className="text-xs sm:text-sm text-orange-200">
+                    Director of Research, Training, and Capacity Building – Eva Helpful
+                  </p>
+                  <p className="text-[11px] sm:text-xs text-slate-300/85">Country of residence: Cameroon</p>
+                </div>
+              </a>
+            </div>
+
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              <a
+                href="/team/professor-jean-emmanuel-pondi"
+                className="inline-flex items-center justify-center rounded-full border border-orange-400/70 bg-orange-500/20 px-7 py-2.5 text-sm sm:text-base font-semibold text-orange-100 shadow-[0_12px_35px_rgba(248,250,252,0.18)] backdrop-blur-xl hover:bg-orange-500/30 hover:border-orange-300 transition-colors"
+              >
+                View value models
+              </a>
+              <a
+                href="/team/endorsers-and-value-advocates"
+                className="inline-flex items-center justify-center rounded-full border border-orange-400/70 bg-orange-500/20 px-7 py-2.5 text-sm sm:text-base font-semibold text-orange-100 shadow-[0_12px_35px_rgba(248,250,252,0.18)] backdrop-blur-xl hover:bg-orange-500/30 hover:border-orange-300 transition-colors"
+              >
+                View endorsers
+              </a>
+            </div>
           </Reveal>
 
           {/* Essential values / Value tree */}
           <section className="max-w-6xl mx-auto space-y-8" id="values">
             <header className="space-y-3">
-              <h2 className="text-2xl sm:text-3xl font-semibold">Our Essential Values &amp; Value Tree</h2>
+              <h2 className="text-2xl sm:text-3xl font-semibold text-slate-50">Our Essential Values &amp; Value Tree</h2>
               <p className="max-w-3xl text-sm sm:text-base text-slate-100/80">
-                We help children and adolescents grow like a healthy treewith strong roots, a solid trunk,
+                We help children and adolescents grow like a healthy tree, with strong roots, a solid trunk,
                 and fruitful lives built on enduring values.
               </p>
             </header>
@@ -420,15 +597,14 @@ export default function Home() {
                 </p>
                 <ul className="list-disc space-y-1 pl-5 text-slate-100/85 text-xs sm:text-sm">
                   <li>
-                    <span className="font-semibold">Roots</span>  early moral foundation from the
-                    family.
+                    <span className="font-semibold">Roots</span> – early moral foundation from the family.
                   </li>
                   <li>
-                    <span className="font-semibold">Trunk</span>  support systems: parents, schools,
+                    <span className="font-semibold">Trunk</span> – support systems: parents, schools,
                     communities, companies.
                   </li>
                   <li>
-                    <span className="font-semibold">Leaves &amp; fruits</span>  responsible,
+                    <span className="font-semibold">Leaves &amp; fruits</span> – responsible,
                     value-driven adults.
                   </li>
                 </ul>
@@ -472,7 +648,7 @@ export default function Home() {
           <section className="max-w-6xl mx-auto space-y-6 glass-panel p-4 sm:p-6" id="media">
             <header className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
               <div className="space-y-2">
-                <h2 className="flex items-center gap-2 text-2xl sm:text-3xl font-semibold">
+                <h2 className="flex items-center gap-2 text-2xl sm:text-3xl font-semibold text-slate-50">
                   <FiCamera className="h-6 w-6 text-orange-300" />
                   Media &amp; Gallery
                 </h2>
@@ -595,7 +771,7 @@ export default function Home() {
           {/* Volunteer + contact */}
           <section className="max-w-6xl mx-auto grid gap-6 lg:grid-cols-2" id="volunteer">
             <div className="glass-panel p-6 sm:p-8 text-sm sm:text-base">
-              <h2 className="mb-2 flex items-center gap-2 text-2xl sm:text-3xl font-semibold">
+              <h2 className="mb-2 flex items-center gap-2 text-2xl sm:text-3xl font-semibold text-slate-50">
                 <FiUsers className="h-6 w-6 text-orange-300" />
                 Volunteer with Us
               </h2>
@@ -664,7 +840,7 @@ export default function Home() {
             </div>
 
             <div className="glass-panel bg-teal-950/90 border border-teal-500/40 p-6 sm:p-8" id="contact">
-              <h2 className="mb-3 flex items-center gap-2 text-xl sm:text-2xl font-semibold">
+              <h2 className="mb-3 flex items-center gap-2 text-xl sm:text-2xl font-semibold text-slate-50">
                 <FiMapPin className="h-5 w-5 text-orange-300" />
                 Contact &amp; Location
               </h2>

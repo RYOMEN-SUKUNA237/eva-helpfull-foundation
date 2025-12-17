@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import "react-phone-number-input/style.css";
@@ -63,7 +64,25 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className={`${sans.variable} ${mono.variable}`}>
       <body className="min-h-screen bg-gradient-to-b from-teal-950 to-teal-900 text-white antialiased font-sans">
-        <div className="flex min-h-screen flex-col">
+        {/* Floating Eva Helpful Global button */}
+        <Link
+          href="/eva-helpful-global"
+          className="fixed left-0 top-1/2 z-40 hidden -translate-y-1/2 flex-col items-center gap-1 rounded-r-full border border-l-0 border-orange-400/80 bg-orange-500/30 px-4 py-3 text-xs font-semibold text-orange-50 shadow-[0_18px_55px_rgba(248,250,252,0.35)] backdrop-blur-xl hover:bg-orange-500/40 hover:border-orange-300 transition-colors sm:flex"
+        >
+          <span className="uppercase tracking-[0.18em] leading-tight text-center text-[10px]">
+            <span className="block">Eva Helpful</span>
+            <span className="block">Global</span>
+          </span>
+        </Link>
+        {/* Mobile floating button, slightly higher to avoid footer */}
+        <Link
+          href="/eva-helpful-global"
+          className="fixed left-0 bottom-24 z-40 flex items-center justify-center rounded-r-full border border-l-0 border-orange-400/80 bg-orange-500/30 px-4 py-2 text-xs font-semibold text-orange-50 shadow-[0_18px_55px_rgba(248,250,252,0.35)] backdrop-blur-xl hover:bg-orange-500/40 hover:border-orange-300 transition-colors sm:hidden"
+        >
+          Eva Helpful Global
+        </Link>
+
+        <div className="flex min-h-screen flex-col pb-16 sm:pb-20">
           <div className="flex-1">{children}</div>
           <Footer />
         </div>

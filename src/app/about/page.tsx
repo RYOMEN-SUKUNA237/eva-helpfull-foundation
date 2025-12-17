@@ -1,7 +1,14 @@
-"use client";
-
+import type { Metadata } from "next";
+import Link from "next/link";
 import { Navbar } from "@/components/layout/Navbar";
 import { BackgroundScene } from "@/components/three/BackgroundScene";
+import { DOCUMENTATIONS } from "@/data/documentations";
+
+export const metadata: Metadata = {
+  title: "About Eva Helpful Foundation",
+  description:
+    "Learn about Eva Helpful Foundation's mission to promote essential values and character development in children and adolescents, and explore our official documentation.",
+};
 
 export default function AboutPage() {
   return (
@@ -15,7 +22,7 @@ export default function AboutPage() {
               <p className="text-xs font-semibold tracking-[0.2em] uppercase text-orange-300">
                 About Us
               </p>
-              <h1 className="text-3xl sm:text-4xl font-semibold">Eva Helpful Foundation</h1>
+              <h1 className="text-3xl sm:text-4xl font-semibold text-slate-50">Eva Helpful Foundation</h1>
               <p className="mx-auto max-w-2xl text-sm sm:text-base text-slate-100/80">
                 Promoting essential values and character development in children and adolescents.
               </p>
@@ -63,6 +70,58 @@ export default function AboutPage() {
                 </p>
               </section>
             </article>
+
+            <section className="space-y-4">
+              <header className="space-y-1">
+                <p className="text-xs font-semibold tracking-[0.2em] uppercase text-orange-300">
+                  Official Documents
+                </p>
+                <h2 className="text-xl sm:text-2xl font-semibold text-slate-50">
+                  Eva Helpful Documentation Library
+                </h2>
+                <p className="text-sm sm:text-base text-slate-100/80">
+                  A quick preview of key official documents. Tap a card to open the full PDF.
+                </p>
+              </header>
+
+              <div className="grid gap-4 sm:grid-cols-2">
+                {DOCUMENTATIONS.slice(0, 2).map((doc) => (
+                  <a
+                    key={doc.slug}
+                    href={`/documentations/${encodeURIComponent(doc.file)}`}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group block"
+                  >
+                    <article className="glass-panel flex items-center gap-3 p-4 sm:p-5 text-xs sm:text-sm group-hover:bg-white/10 transition-colors">
+                      <div className="flex h-16 w-14 sm:h-20 sm:w-16 flex-shrink-0 items-center justify-center rounded-md border border-white/25 bg-slate-900/70">
+                        <span className="text-[10px] sm:text-xs font-semibold text-orange-200">PDF</span>
+                      </div>
+                      <div className="space-y-1">
+                        <h3 className="text-[11px] sm:text-sm font-semibold text-slate-50">{doc.title}</h3>
+                        <p className="text-[11px] sm:text-[13px] text-slate-100/85 line-clamp-3">
+                          {doc.description}
+                        </p>
+                        <p className="mt-1 text-[10px] sm:text-[11px] text-slate-300/85">
+                          Click to open full view-only PDF in a new tab.
+                        </p>
+                      </div>
+                    </article>
+                  </a>
+                ))}
+              </div>
+
+              <div>
+                <Link
+                  href="/docs"
+                  className="inline-flex items-center text-[11px] sm:text-xs font-semibold text-orange-300 hover:text-orange-200"
+                >
+                  View more documents
+                  <span className="ml-1 text-base leading-none">→</span>
+                </Link>
+              </div>
+            </section>
+
           </section>
         </main>
       </div>

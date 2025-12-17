@@ -38,11 +38,11 @@ export default function ProgramsPage() {
               <p className="text-xs font-semibold tracking-[0.2em] uppercase text-orange-300">
                 Essential Values
               </p>
-              <h1 className="text-3xl sm:text-4xl font-semibold">
+              <h1 className="text-3xl sm:text-4xl font-semibold text-white">
                 Our Essential Values: Building Responsible Futures
               </h1>
               <p className="mx-auto max-w-3xl text-sm sm:text-base text-slate-100/80">
-                These pillars guide our work with children, adolescents, and the adults who support them.
+                These pillars guide our work with children, young people, and the adults who support them.
                 Each value is translated into practical conversations, activities, and everyday choices.
               </p>
             </header>

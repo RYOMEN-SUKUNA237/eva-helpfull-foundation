@@ -5,8 +5,8 @@ html {
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #020617;
+  --foreground: #e5e7eb;
 }
 
 @theme inline {
@@ -28,6 +28,7 @@ html {
 body {
   color: var(--foreground);
   background: radial-gradient(circle at top, #0f766e 0, #022c33 40%, #020617 100%);
+  overflow-x: hidden; /* prevent whole page from scrolling sideways */
 }
 
 .page-shell {
@@ -90,11 +91,11 @@ body {
 }
 
 .reveal-section[data-direction="left"] {
-  transform: translate3d(-32px, 16px, 0) scale(0.98);
+  transform: translate3d(-32px, 16px, 0) scale(0.96);
 }
 
 .reveal-section[data-direction="right"] {
-  transform: translate3d(32px, 16px, 0) scale(0.98);
+  transform: translate3d(32px, 16px, 0) scale(0.96);
 }
 
 .reveal-section.is-visible {
@@ -165,4 +166,46 @@ body {
 .phone-input input[type="tel"]:focus,
 .phone-input-number:focus {
   @apply border-orange-400/70 ring-1 ring-orange-400/40;
+}
+
+/* Horizontal scrollbar theming for carousels (e.g., leadership strip)
+   Hidden by default, appears as an orange glass bar on hover/scroll */
+.horizontal-scroll {
+  scrollbar-width: none; /* Firefox: hide by default */
+}
+
+.horizontal-scroll:hover {
+  scrollbar-color: rgba(249, 115, 22, 0.55) transparent;
+  scrollbar-width: thin;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+  height: 0; /* hidden by default */
+  transition: height 150ms ease-out;
+}
+
+.horizontal-scroll:hover::-webkit-scrollbar {
+  height: 6px; /* visible while interacting */
+}
+
+.horizontal-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.horizontal-scroll:hover::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.7);
+  border-radius: 9999px;
+}
+
+.horizontal-scroll::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+.horizontal-scroll:hover::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to right,
+    rgba(249, 115, 22, 0.7),
+    rgba(248, 250, 252, 0.15)
+  ); /* orange glass effect */
+  border-radius: 9999px;
 }

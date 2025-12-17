@@ -19,7 +19,7 @@ export default function ProfessorAlainIsohPage() {
                 />
               </div>
               <div>
-                <h1 className="text-xl sm:text-2xl font-semibold text-slate-50">
+                <h1 className="text-3xl sm:text-4xl font-semibold text-white">
                   Professor Alain Vilard Ndi Isoh
                 </h1>
                 <p className="text-sm text-orange-200">
