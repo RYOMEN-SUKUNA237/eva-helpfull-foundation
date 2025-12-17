@@ -1,12 +1,13 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import path from "path";
 import { promises as fs } from "fs";
 
 export async function GET(
-  _req: Request,
-  { params }: { params: { file: string[] } }
+  _req: NextRequest,
+  context: { params: Promise<{ file: string[] }> }
 ) {
-  const segments = Array.isArray(params.file) ? params.file : [params.file];
+  const { file } = await context.params;
+  const segments = Array.isArray(file) ? file : [file];
 
   const decodedSegments = segments.map((s) => decodeURIComponent(s));
 
