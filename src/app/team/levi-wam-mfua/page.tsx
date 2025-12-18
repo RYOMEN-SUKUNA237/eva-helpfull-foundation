@@ -24,8 +24,7 @@ export default function LeviWamMfuaPage() {
                   Coordinator – Digital Communications and Protocol
                 </p>
                 <p className="text-xs sm:text-sm text-slate-200/90 mt-1">
-                  Country of residence: Cameroon · Location: Tiko · Email: isohlevi05@gmail.com · Mobile: (+237)
-                  673 51 51 72
+                  Country of residence: Cameroon
                 </p>
               </div>
             </div>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Navbar } from "@/components/layout/Navbar";
 import { BackgroundScene } from "@/components/three/BackgroundScene";
+import { FiGlobe, FiHeart, FiUsers } from "react-icons/fi";
 
 export const metadata: Metadata = {
   title: "Eva Helpful Global",
@@ -15,44 +16,75 @@ export default function EvaHelpfulGlobalPage() {
       <div className="page-shell-main">
         <Navbar />
         <main className="pt-28 pb-20 px-4 sm:px-6 lg:px-8 flex-1 flex flex-col gap-16">
-          {/* About Eva Helpful Global */}
+          {/* Hero – Eva Helpful Global */}
           <section className="mx-auto w-full max-w-5xl">
             <div className="flex flex-col items-center text-center gap-6">
               <div className="inline-flex items-center gap-2 rounded-full border border-orange-400/60 bg-orange-500/15 px-4 py-1 text-xs font-semibold uppercase tracking-wide text-orange-200">
-                Eva Helpful Global
+                <FiGlobe className="h-3.5 w-3.5" />
+                <span>Eva Helpful Global</span>
               </div>
-              <div className="glass-panel w-full max-w-4xl p-8 sm:p-10 space-y-6 bg-black/40">
+              <div className="space-y-4 max-w-3xl">
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-slate-50">
-                  About Us Eva Helpful Global
+                  Eva Helpful Global
                 </h1>
-                <div className="space-y-4 text-left text-sm sm:text-base text-slate-100/85">
+                <p className="text-sm sm:text-base text-slate-100/85">
+                  Extending the Eva Helpful Essential Values beyond borders – nurturing children and adolescents
+                  to become responsible, value-driven global citizens.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* About Eva Helpful Global – structured like About section */}
+          <section className="mx-auto w-full max-w-5xl">
+            <div className="glass-panel p-6 sm:p-8 space-y-8">
+              <header className="space-y-2 text-center sm:text-left">
+                <p className="text-xs font-semibold tracking-[0.2em] uppercase text-orange-300">
+                  About Eva Helpful Global
+                </p>
+                <h2 className="text-2xl sm:text-3xl font-semibold text-slate-50">
+                  Taking values-based education to the world
+                </h2>
+              </header>
+
+              <div className="grid gap-6 md:grid-cols-2 text-sm sm:text-base text-slate-100/85">
+                <section className="space-y-3">
+                  <h3 className="flex items-center gap-2 text-lg font-semibold text-orange-300">
+                    <FiHeart className="h-5 w-5" />
+                    Our global mission
+                  </h3>
                   <p>
-                    <strong>Eva Helpful Global</strong> is the international arm of the Eva Helpful
-                    Foundation, dedicated to fostering global collaboration and promoting positive
-                    values among children and adolescents. Operating across multiple countries, the
-                    initiative engages diverse communities to develop programs that cultivate
-                    honesty, empathy, integrity, respect, and responsibility, ensuring that children
-                    and adolescents grow into responsible adults and active global citizens.
+                    <strong>Eva Helpful Global</strong> is the international arm of the Eva Helpful Foundation,
+                    dedicated to fostering global collaboration and promoting positive values among children and
+                    adolescents. Operating across multiple countries, the initiative engages diverse communities
+                    to develop programs that cultivate honesty, empathy, integrity, respect, and responsibility,
+                    ensuring that young people grow into responsible adults and active global citizens.
                   </p>
                   <p>
-                    Eva Helpful Global also prioritises values relating to psycho-social and mental
-                    health well-being, environmental protection, and sustainable livelihood
-                    practices. By enhancing understanding of cultural and social diversity, the
-                    initiative equips children and adolescents with the knowledge, skills, and
-                    values needed to contribute positively to society and achieve responsible
-                    adulthood.
+                    Eva Helpful Global also prioritises values relating to psycho-social and mental well-being,
+                    environmental protection, and sustainable livelihood practices. By enhancing understanding of
+                    cultural and social diversity, the initiative equips children and adolescents with the
+                    knowledge, skills, and values needed to contribute positively to society.
+                  </p>
+                </section>
+
+                <section className="space-y-3">
+                  <h3 className="flex items-center gap-2 text-lg font-semibold text-orange-300">
+                    <FiUsers className="h-5 w-5" />
+                    How we work across borders
+                  </h3>
+                  <p>
+                    Through strategic partnerships with educational institutions, community organisations,
+                    companies, NGOs, governmental institutions, and international stakeholders, Eva Helpful Global
+                    implements programs that deliver measurable outcomes: strengthened citizenship, enhanced
+                    social and emotional competencies, and improved cross-cultural awareness.
                   </p>
                   <p>
-                    Through strategic partnerships with educational institutions, community
-                    organisations, companies, NGOs, governmental institutions, and international
-                    stakeholders, Eva Helpful Global implements programs that deliver measurable
-                    outcomes, including strengthened citizenship, enhanced social and emotional
-                    competencies, and improved cross-cultural awareness. By leveraging global
-                    networks and sharing best practices, the initiative empowers children and
-                    adolescents to become socially conscious, responsible, and contributing members
-                    of their communities and the wider world.
+                    By leveraging global networks and sharing best practices, the initiative empowers children and
+                    adolescents to become socially conscious, responsible, and contributing members of their
+                    communities and the wider world.
                   </p>
-                </div>
+                </section>
               </div>
             </div>
           </section>
@@ -88,11 +120,7 @@ export default function EvaHelpfulGlobalPage() {
                   <p className="mt-1 text-xs sm:text-sm text-orange-100/90 font-medium">
                     Country Representative Eva Helpful Foundation (United Kingdom)
                   </p>
-                  <p className="mt-2 text-xs sm:text-sm text-slate-200/80">Romford, London</p>
-                  <p className="mt-2 text-[11px] sm:text-xs text-slate-200/80">
-                    Tel: 0758 386 4822 
-                     Email: arianna.r.connect@gmail.com
-                  </p>
+                  <p className="mt-2 text-xs sm:text-sm text-slate-200/80">Based in Romford, London</p>
                 </article>
 
                 {/* Arianna detailed profile */}
@@ -198,12 +226,6 @@ export default function EvaHelpfulGlobalPage() {
                         </p>
                       </div>
 
-                      <div>
-                        <p className="font-medium text-slate-50">
-                          Secondary School Technical Diploma Land Surveying I.T.C.G. Nervi,
-                          Rignano Flaminio (RM), Italy Autumn 2001 Summer 2007
-                        </p>
-                      </div>
                     </div>
                   </div>
                 </div>

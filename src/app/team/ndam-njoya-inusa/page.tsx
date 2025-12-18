@@ -26,7 +26,7 @@ export default function NdamNjoyaInusaPage() {
                   Director of Grants Management and Audit – Eva Helpful
                 </p>
                 <p className="text-xs sm:text-sm text-slate-200/90 mt-1">
-                  Senior Financial Auditor | EY Cameroon · Country of residence: Cameroon (Douala)
+                  Senior Financial Auditor | EY Cameroon
                 </p>
               </div>
             </div>
@@ -45,8 +45,8 @@ export default function NdamNjoyaInusaPage() {
                   teams, and making high-stakes decisions with a focus on compliance, accuracy, and efficiency.
                 </p>
                 <p className="text-slate-100/80 text-xs sm:text-sm">
-                  Country of residence: Cameroon · Location: Douala · Email: ndamnjoya40@yahoo.com · Mobile:
-                  (+237) 670 68 38 51
+                  Experienced in Cameroon and regional markets, working with clients across Oil &amp; Gas,
+                  Energy, Banking, Industrial, and Service sectors.
                 </p>
               </div>
 
@@ -148,13 +148,7 @@ export default function NdamNjoyaInusaPage() {
 
               <div className="space-y-2 text-[11px] sm:text-xs text-slate-300/85">
                 <h3 className="font-semibold text-orange-300">References</h3>
-                <p>
-                  Ebot Joe Clark – Assistant Manager, EY Cameroon · Email: ebotjoeclark@gmail.com
-                </p>
-                <p>
-                  Mesode Koge Fonderson FCCA – Former Senior Manager/RM Lead, AVV Limited (Partner) · Email:
-                  kamesode@yahoo.co
-                </p>
+                <p>Professional references available on request.</p>
               </div>
             </div>
           </section>
