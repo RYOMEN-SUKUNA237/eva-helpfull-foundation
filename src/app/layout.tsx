@@ -82,7 +82,7 @@ export default function RootLayout({
           Eva Helpful Global
         </Link>
 
-        <div className="flex min-h-screen flex-col pb-16 sm:pb-20">
+        <div className="flex min-h-screen flex-col pb-56 sm:pb-72">
           <div className="flex-1">{children}</div>
           <Footer />
         </div>

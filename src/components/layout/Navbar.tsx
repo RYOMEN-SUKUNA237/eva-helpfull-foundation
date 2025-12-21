@@ -31,6 +31,8 @@ const SEARCH_ITEMS: SearchItem[] = [
   { label: "Essential Values", href: "/#values" },
   { label: "Team – Leadership", href: "/#team" },
   { label: "Blog – Stories from Eva Helpful", href: "/#blog" },
+  { label: "Blog – 5 Simple Ways to Teach Honesty", href: "/blog/5-ways-to-teach-honesty" },
+  { label: "Blog – Emotional Intelligence in Schools", href: "/blog/emotional-intelligence-in-schools" },
   { label: "Media & Gallery", href: "/#media" },
   { label: "Donate", href: "/#donate" },
   { label: "Volunteer", href: "/#volunteer" },
@@ -257,7 +259,11 @@ export function Navbar() {
             })}
             <div className="relative">
               <form onSubmit={handleSearch} className="flex items-center gap-1.5 text-xs">
+                <label htmlFor="navbar-search-desktop" className="sr-only">
+                  Search site
+                </label>
                 <input
+                  id="navbar-search-desktop"
                   type="search"
                   placeholder="Search pages, people, sections..."
                   value={query}
@@ -309,7 +315,11 @@ export function Navbar() {
               <form onSubmit={handleSearch} className="flex items-center gap-1 text-[11px]">
                 <div className="flex items-center gap-1 rounded-full border border-white/20 bg-black/30 px-2 py-1">
                   <FiSearch className="h-3 w-3 text-slate-200" />
+                  <label htmlFor="navbar-search-mobile" className="sr-only">
+                    Search site
+                  </label>
                   <input
+                    id="navbar-search-mobile"
                     type="search"
                     placeholder="Search..."
                     value={query}

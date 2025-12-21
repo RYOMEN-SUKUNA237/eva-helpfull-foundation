@@ -9,6 +9,8 @@ interface PhoneFieldProps {
   label?: string;
   required?: boolean;
   defaultCountry?: string;
+  inputId?: string;
+  placeholder?: string;
 }
 
 export function PhoneField({
@@ -16,6 +18,8 @@ export function PhoneField({
   label = "Phone number",
   required = true,
   defaultCountry = "CM",
+  inputId,
+  placeholder,
 }: PhoneFieldProps) {
   const [value, setValue] = useState<Value>();
 
@@ -26,11 +30,13 @@ export function PhoneField({
       </label>
       <div className="w-full">
         <PhoneInput
+          id={inputId}
           international
           countryCallingCodeEditable={false}
           defaultCountry={defaultCountry as any}
           value={value}
           onChange={setValue}
+          placeholder={placeholder}
           className="phone-input text-sm text-slate-100"
         />
       </div>

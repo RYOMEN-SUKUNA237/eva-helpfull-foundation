@@ -89,42 +89,75 @@ function DonatePageInner() {
             <form onSubmit={handleSubmit} className="space-y-4 text-sm sm:text-base">
               <div className="grid gap-4 sm:grid-cols-3">
                 <div className="sm:col-span-1">
-                  <label className="block text-xs font-medium text-slate-100/80 mb-1">Full name</label>
+                  <label
+                    htmlFor="donate-name"
+                    className="block text-xs font-medium text-slate-100/80 mb-1"
+                  >
+                    Full name
+                  </label>
                   <input
+                    id="donate-name"
                     name="donor_name"
+                    placeholder="my name here"
                     required
                     className="w-full rounded-md border border-white/20 bg-black/20 px-3 py-2 text-sm outline-none focus:border-orange-400"
                   />
                 </div>
                 <div className="sm:col-span-1">
-                  <label className="block text-xs font-medium text-slate-100/80 mb-1">Email address</label>
+                  <label
+                    htmlFor="donate-email"
+                    className="block text-xs font-medium text-slate-100/80 mb-1"
+                  >
+                    Email address
+                  </label>
                   <input
+                    id="donate-email"
                     name="email"
                     type="email"
+                    placeholder="example@gmail.com"
                     required
                     className="w-full rounded-md border border-white/20 bg-black/20 px-3 py-2 text-sm outline-none focus:border-orange-400"
                   />
                 </div>
                 <div className="sm:col-span-1">
-                  <PhoneField />
+                  <label
+                    htmlFor="donate-phone"
+                    className="block text-xs font-medium text-slate-100/80 mb-1"
+                  >
+                    Phone number (for follow-up)
+                  </label>
+                  <PhoneField inputId="donate-phone" placeholder="e.g. +237 6 00 00 00 00" />
                 </div>
               </div>
 
               <div className="grid gap-4 sm:grid-cols-2">
                 <div>
-                  <label className="block text-xs font-medium text-slate-100/80 mb-1">Amount (USD)</label>
+                  <label
+                    htmlFor="donate-amount"
+                    className="block text-xs font-medium text-slate-100/80 mb-1"
+                  >
+                    Amount (USD)
+                  </label>
                   <input
+                    id="donate-amount"
                     name="amount"
                     type="number"
                     step="0.01"
                     min="1"
+                    placeholder="e.g. 50 or 100"
                     required
                     className="w-full rounded-md border border-white/20 bg-black/20 px-3 py-2 text-sm outline-none focus:border-orange-400"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-slate-100/80 mb-1">Frequency</label>
+                  <label
+                    htmlFor="donate-frequency"
+                    className="block text-xs font-medium text-slate-100/80 mb-1"
+                  >
+                    Frequency
+                  </label>
                   <select
+                    id="donate-frequency"
                     name="frequency"
                     className="w-full rounded-md border border-white/20 bg-black/20 px-3 py-2 text-sm outline-none focus:border-orange-400"
                   >

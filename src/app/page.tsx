@@ -188,35 +188,51 @@ export default function Home() {
                   volunteers who want to nurture values in young people.
                 </p>
               </div>
+              <div className="sm:text-right">
+                <Link
+                  href="/blog"
+                  className="inline-flex items-center gap-2 rounded-full border border-orange-400/80 bg-orange-500/20 px-4 py-2 text-xs sm:text-sm font-semibold text-orange-50 shadow-[0_10px_30px_rgba(248,250,252,0.25)] hover:bg-orange-500/30 hover:border-orange-300 transition-colors"
+                >
+                  <span>View all blogs</span>
+                  <span className="text-base leading-none">→</span>
+                </Link>
+              </div>
             </header>
 
             <div className="grid gap-5 md:grid-cols-3">
-              <article className="glass-panel flex flex-col p-5 text-sm">
-                <p className="text-[11px] font-semibold uppercase tracking-wide text-orange-300 mb-1">
-                  Field Notes
-                </p>
-                <h3 className="text-base sm:text-lg font-semibold mb-2">
-                  What a values session feels like inside a busy classroom
-                </h3>
-                <p className="mb-3 text-slate-100/80">
-                  A look at how simple activities and honest conversations can shift the atmosphere in a
-                  room full of students.
-                </p>
-                <span className="mt-auto text-xs text-slate-300/90">Coming soon from the Eva team</span>
-              </article>
-
-              <article className="glass-panel flex flex-col p-5 text-sm">
+              {/* Featured published article */}
+              <Link
+                href="/blog/5-ways-to-teach-honesty"
+                className="glass-panel flex flex-col p-5 text-sm transition hover:border-orange-400/70 hover:bg-slate-900/60"
+              >
                 <p className="text-[11px] font-semibold uppercase tracking-wide text-orange-300 mb-1">
                   For Parents
                 </p>
                 <h3 className="text-base sm:text-lg font-semibold mb-2">
-                  5 small conversations that build big character
+                  5 Simple Ways to Teach Honesty to Your Child This Week
                 </h3>
                 <p className="mb-3 text-slate-100/80">
-                  Short prompts you can use at home to talk about respect, responsibility, and empathy.
+                  Practical tips to encourage honesty and build trust with your child at home.
                 </p>
-                <span className="mt-auto text-xs text-slate-300/90">New article series planned</span>
-              </article>
+                <span className="mt-auto text-xs font-medium text-orange-200">Read article</span>
+              </Link>
+
+              {/* Second published article */}
+              <Link
+                href="/blog/emotional-intelligence-in-schools"
+                className="glass-panel flex flex-col p-5 text-sm transition hover:border-orange-400/70 hover:bg-slate-900/60"
+              >
+                <p className="text-[11px] font-semibold uppercase tracking-wide text-orange-300 mb-1">
+                  Future of Education
+                </p>
+                <h3 className="text-base sm:text-lg font-semibold mb-2">
+                  The Future of Education: Integrating Emotional Intelligence in Schools
+                </h3>
+                <p className="mb-3 text-slate-100/80">
+                  Why Social and Emotional Learning (SEL) is the missing link in classrooms across Cameroon.
+                </p>
+                <span className="mt-auto text-xs font-medium text-orange-200">Read article</span>
+              </Link>
 
               <article className="glass-panel flex flex-col p-5 text-sm">
                 <p className="text-[11px] font-semibold uppercase tracking-wide text-orange-300 mb-1">

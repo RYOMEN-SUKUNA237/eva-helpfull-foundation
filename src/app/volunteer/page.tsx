@@ -61,18 +61,32 @@ export default function VolunteerPage() {
             <form onSubmit={handleSubmit} className="space-y-4 text-sm sm:text-base">
               <div className="grid gap-4 sm:grid-cols-2">
                 <div>
-                  <label className="block text-xs font-medium text-slate-100/80 mb-1">Full name</label>
+                  <label
+                    htmlFor="volunteer-name"
+                    className="block text-xs font-medium text-slate-100/80 mb-1"
+                  >
+                    Full name
+                  </label>
                   <input
+                    id="volunteer-name"
                     name="name"
+                    placeholder="my name here"
                     required
                     className="w-full rounded-md border border-white/20 bg-black/20 px-3 py-2 text-sm outline-none focus:border-orange-400"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-slate-100/80 mb-1">Email address</label>
+                  <label
+                    htmlFor="volunteer-email"
+                    className="block text-xs font-medium text-slate-100/80 mb-1"
+                  >
+                    Email address
+                  </label>
                   <input
+                    id="volunteer-email"
                     name="email"
                     type="email"
+                    placeholder="example@gmail.com"
                     required
                     className="w-full rounded-md border border-white/20 bg-black/20 px-3 py-2 text-sm outline-none focus:border-orange-400"
                   />
@@ -81,16 +95,29 @@ export default function VolunteerPage() {
 
               <div className="grid gap-4 sm:grid-cols-2">
                 <div>
-                  <label className="block text-xs font-medium text-slate-100/80 mb-1">Phone number</label>
+                  <label
+                    htmlFor="volunteer-phone"
+                    className="block text-xs font-medium text-slate-100/80 mb-1"
+                  >
+                    Phone number
+                  </label>
                   <input
+                    id="volunteer-phone"
                     name="phone"
+                    placeholder="Enter your phone number"
                     required
                     className="w-full rounded-md border border-white/20 bg-black/20 px-3 py-2 text-sm outline-none focus:border-orange-400"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-medium text-slate-100/80 mb-1">Area of interest</label>
+                  <label
+                    htmlFor="volunteer-interest"
+                    className="block text-xs font-medium text-slate-100/80 mb-1"
+                  >
+                    Area of interest
+                  </label>
                   <input
+                    id="volunteer-interest"
                     name="interest"
                     placeholder="e.g. school visits, media, admin..."
                     required
