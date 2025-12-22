@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.evahelpful.org/
+
+# Sitemaps
+Sitemap: https://www.evahelpful.org/sitemap.xml
