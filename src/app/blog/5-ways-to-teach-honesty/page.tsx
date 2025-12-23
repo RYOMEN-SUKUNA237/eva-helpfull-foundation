@@ -208,6 +208,41 @@ export default function TeachHonestyBlogPost() {
             </div>
           </aside>
         </article>
+
+        <section className="mt-10 border-t border-white/10 pt-8 text-sm sm:text-base">
+          <h2 className="text-base sm:text-lg font-semibold text-slate-50 mb-3">You may also like</h2>
+          <div className="grid gap-4 md:grid-cols-2">
+            <Link
+              href="/blog/emotional-intelligence-in-schools"
+              className="glass-panel flex flex-col p-4 text-sm transition hover:border-orange-400/70 hover:bg-slate-900/60"
+            >
+              <p className="text-[11px] font-semibold uppercase tracking-wide text-orange-300 mb-1">
+                Future of Education
+              </p>
+              <h3 className="text-sm sm:text-base font-semibold mb-1">
+                The Future of Education: Integrating Emotional Intelligence in Schools
+              </h3>
+              <p className="text-slate-100/80 text-xs sm:text-sm">
+                Why Social and Emotional Learning (SEL) is essential for safer, happier, and more successful schools.
+              </p>
+            </Link>
+
+            <Link
+              href="/blog/managing-teen-smartphone-use-cameroon"
+              className="glass-panel flex flex-col p-4 text-sm transition hover:border-orange-400/70 hover:bg-slate-900/60"
+            >
+              <p className="text-[11px] font-semibold uppercase tracking-wide text-orange-300 mb-1">
+                Parenting Guides
+              </p>
+              <h3 className="text-sm sm:text-base font-semibold mb-1">
+                The Silent Epidemic: A Cameroonian Parents Guide to Managing Teen Smartphone Use
+              </h3>
+              <p className="text-slate-100/80 text-xs sm:text-sm">
+                Practical strategies to manage teen screen time, build trust, and restore family connection at home.
+              </p>
+            </Link>
+          </div>
+        </section>
       </div>
     </main>
   );

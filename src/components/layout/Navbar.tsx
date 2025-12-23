@@ -29,10 +29,15 @@ const SEARCH_ITEMS: SearchItem[] = [
   { label: "Home – Top", href: "/#top" },
   { label: "About – Eva Helpful Foundation", href: "/#about" },
   { label: "Essential Values", href: "/#values" },
-  { label: "Team – Leadership", href: "/#team" },
+  { label: "Team – Leadership", href: "#team" },
   { label: "Blog – Stories from Eva Helpful", href: "/#blog" },
   { label: "Blog – 5 Simple Ways to Teach Honesty", href: "/blog/5-ways-to-teach-honesty" },
   { label: "Blog – Emotional Intelligence in Schools", href: "/blog/emotional-intelligence-in-schools" },
+  {
+    label:
+      "Blog – The Silent Epidemic: A Cameroonian Parent’s Guide to Managing Teen Smartphone Use",
+    href: "/blog/managing-teen-smartphone-use-cameroon",
+  },
   { label: "Media & Gallery", href: "/#media" },
   { label: "Donate", href: "/#donate" },
   { label: "Volunteer", href: "/#volunteer" },

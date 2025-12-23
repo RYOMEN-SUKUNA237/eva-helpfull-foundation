@@ -17,7 +17,7 @@ export default function BlogIndexPage() {
           </p>
         </header>
 
-        <section aria-label="Blog articles" className="grid gap-5 md:grid-cols-2">
+        <section aria-label="Blog articles" className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           <Link
             href="/blog/5-ways-to-teach-honesty"
             className="glass-panel flex flex-col p-5 text-sm transition hover:border-orange-400/70 hover:bg-slate-900/60"
@@ -48,6 +48,23 @@ export default function BlogIndexPage() {
             <p className="mb-3 text-slate-100/80">
               Discover why Social and Emotional Learning (SEL) is essential for safer, happier, and more
               successful schools.
+            </p>
+            <span className="mt-auto text-xs font-medium text-orange-200">Read article</span>
+          </Link>
+
+          <Link
+            href="/blog/managing-teen-smartphone-use-cameroon"
+            className="glass-panel flex flex-col p-5 text-sm transition hover:border-orange-400/70 hover:bg-slate-900/60"
+          >
+            <p className="text-[11px] font-semibold uppercase tracking-wide text-orange-300 mb-1">
+              Parenting Guides
+            </p>
+            <h2 className="text-base sm:text-lg font-semibold mb-2">
+              The Silent Epidemic: A Cameroonian Parents Guide to Managing Teen Smartphone Use
+            </h2>
+            <p className="mb-3 text-slate-100/80">
+              Is your teen constantly on their phone? Explore practical strategies to manage screen time, build
+              trust, and restore family connection.
             </p>
             <span className="mt-auto text-xs font-medium text-orange-200">Read article</span>
           </Link>

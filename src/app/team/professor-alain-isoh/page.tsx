@@ -13,9 +13,9 @@ export default function ProfessorAlainIsohPage() {
             <div className="flex flex-col items-center gap-4 text-center">
               <div className="h-32 w-32 sm:h-40 sm:w-40 overflow-hidden rounded-full border border-white/20 bg-black/40">
                 <img
-                  src="/face_card_prof.jpg"
+                  src="/uppdate%20prof%20alain.jpeg"
                   alt="Professor Alain Vilard Ndi Isoh"
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover object-top"
                 />
               </div>
               <div>

@@ -106,7 +106,10 @@ export default function EvaHelpfulGlobalPage() {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
                 {/* Arianna card */}
-                <article className="glass-panel p-5 sm:p-6 flex flex-col items-center text-center bg-black/40">
+                <a
+                  href="#arianna-profile"
+                  className="glass-panel p-5 sm:p-6 flex flex-col items-center text-center bg-black/40 hover:bg-black/50 transition-colors"
+                >
                   <div className="h-28 w-28 sm:h-32 sm:w-32 overflow-hidden rounded-full border border-white/25 bg-black/40 mb-4">
                     <img
                       src="/Picture1.png"
@@ -121,12 +124,16 @@ export default function EvaHelpfulGlobalPage() {
                     Country Representative Eva Helpful Foundation (United Kingdom)
                   </p>
                   <p className="mt-2 text-xs sm:text-sm text-slate-200/80">Based in Romford, London</p>
-                </article>
+                </a>
 
                 {/* Arianna detailed profile */}
-                <div className="md:col-span-2 glass-panel p-5 sm:p-6 space-y-5 bg-black/40 text-sm sm:text-base text-slate-100/85">
+                <div
+                  id="arianna-profile"
+                  className="md:col-span-2 glass-panel p-5 sm:p-6 space-y-5 bg-black/40 text-sm sm:text-base text-slate-100/85"
+                >
                   <div>
-                    <h3 className="text-base sm:text-lg font-semibold text-slate-50">
+                    <h3 className="flex items-center gap-2 text-base sm:text-lg font-semibold text-slate-50">
+                      <FiUsers className="h-5 w-5" />
                       Professional Profile
                     </h3>
                     <p className="mt-2">
@@ -155,7 +162,8 @@ export default function EvaHelpfulGlobalPage() {
                   </div>
 
                   <div>
-                    <h3 className="text-base sm:text-lg font-semibold text-slate-50">
+                    <h3 className="flex items-center gap-2 text-base sm:text-lg font-semibold text-slate-50">
+                      <FiUsers className="h-5 w-5" />
                       Core Competencies
                     </h3>
                     <ul className="mt-2 space-y-1 list-disc list-inside text-sm sm:text-[15px] text-slate-100/90">
@@ -175,7 +183,8 @@ export default function EvaHelpfulGlobalPage() {
                   </div>
 
                   <div>
-                    <h3 className="text-base sm:text-lg font-semibold text-slate-50">
+                    <h3 className="flex items-center gap-2 text-base sm:text-lg font-semibold text-slate-50">
+                      <FiUsers className="h-5 w-5" />
                       Professional Training, Certifications &amp; Education
                     </h3>
                     <div className="mt-2 space-y-3 text-sm sm:text-[15px]">
@@ -231,9 +240,157 @@ export default function EvaHelpfulGlobalPage() {
                 </div>
               </div>
 
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+                {/* Ferdinand card */}
+                <a
+                  href="#ferdinand-profile"
+                  className="glass-panel p-5 sm:p-6 flex flex-col items-center text-center bg-black/40 hover:bg-black/50 transition-colors"
+                >
+                  <div className="h-28 w-28 sm:h-32 sm:w-32 overflow-hidden rounded-full border border-white/25 bg-black/40 mb-4">
+                    <img
+                      src="/Ndifongong%20Ferdinand%20Nsanyui.png"
+                      alt="Ndifongong Ferdinand Nsanyui"
+                      className="h-full w-full object-cover"
+                    />
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-semibold text-slate-50">
+                    Ndifongong Ferdinand Nsanyui
+                  </h3>
+                  <p className="mt-1 text-xs sm:text-sm text-orange-100/90 font-medium">
+                    Country Representative | Eva Helpful Global | South Korea
+                  </p>
+                  <p className="mt-2 text-xs sm:text-sm text-slate-200/80">Country of Residence: South Korea</p>
+                </a>
+
+                <div className="md:col-span-2 glass-panel p-5 sm:p-6 space-y-5 bg-black/40 text-sm sm:text-base text-slate-100/85">
+                  <div>
+                    <h3 className="flex items-center gap-2 text-base sm:text-lg font-semibold text-slate-50">
+                      <FiUsers className="h-5 w-5" />
+                      Profile
+                    </h3>
+                    <p className="mt-2">
+                      Dedicated, results-driven professional with over 11 years&apos; experience across academic,
+                      corporate, and non-profit settings. Possesses strong leadership, project management, and
+                      organisational skills, with a proven ability to engage diverse stakeholders and enhance
+                      operational efficiency. Passionate about empowering communities, supporting international
+                      collaboration, and promoting sustainable development initiatives.
+                    </p>
+                    <p className="mt-2">
+                      <span className="font-semibold">Career Focus:</span> Project Management, Finance &amp;
+                      Administration, Capacity Building, Community Engagement, International Development.
+                    </p>
+                  </div>
+
+                  <div>
+                    <h3 className="flex items-center gap-2 text-base sm:text-lg font-semibold text-slate-50">
+                      <FiUsers className="h-5 w-5" />
+                      Education
+                    </h3>
+                    <ul className="mt-2 space-y-1 list-disc list-inside">
+                      <li>
+                        Doctoral in Business Administration (In Progress) – Konyang University, South Korea
+                        (2022–Present)
+                      </li>
+                      <li>
+                        Korean Language Certificate (2 years study, 2022–2024)
+                      </li>
+                      <li>
+                        MSc Accounting and Finance (First Class, Top-up) – University of Buea / Biaka University,
+                        Cameroon (2021–2022)
+                      </li>
+                      <li>
+                        MBA Accounting and Finance (First Class Hons) – University of Bamenda / HIMS Buea,
+                        Cameroon (2017–2020)
+                      </li>
+                      <li>
+                        ICAN Application Level – Institute of Chartered Accountants of Nigeria (2015–Present)
+                      </li>
+                      <li>
+                        B.Tech Accounting (First Class Honors) – University of Bamenda, Cameroon (2013–2014)
+                      </li>
+                      <li>
+                        HND Accounting (Lower Credit) – HIMS Buea / Minesup, Cameroon (2011–2013)
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="flex items-center gap-2 text-base sm:text-lg font-semibold text-slate-50">
+                      <FiUsers className="h-5 w-5" />
+                      Professional Experience
+                    </h3>
+                    <ul className="mt-2 space-y-1 list-disc list-inside">
+                      <li>
+                        <span className="font-semibold">ANC Ltd, Buea – Financial Manager &amp; Shareholder (2018–Present):</span>
+                        Oversees financial management, budgeting, and reporting; manages general affairs and operational
+                        planning; coordinates with stakeholders to enhance organizational performance.
+                      </li>
+                      <li>
+                        <span className="font-semibold">HIMS Buea – Deputy Registrar / Lecturer (2020–2022):</span>
+                        Managed academic administration, curriculum delivery, and student support; developed workshops
+                        and trainings to improve student skills and employability.
+                      </li>
+                      <li>
+                        <span className="font-semibold">Konyang University, South Korea – Student Representative &amp; Assistant (2024–2025):</span>
+                        Supported international students with documentation and university procedures; provided
+                        Korean-English translation and interpretation for cross-cultural communication; facilitated
+                        connections between students and university services.
+                      </li>
+                      <li>
+                        <span className="font-semibold">Kosan Crisplant Cameroon S.A. – Intern (2014):</span>
+                        Assisted in tax administration, financial reporting, stocktaking, and bank reconciliation.
+                      </li>
+                      <li>
+                        <span className="font-semibold">Solid Foundation International (SOFI), Bamenda – Intern (2012):</span>
+                        Maintained daily records and conducted financial reconciliations.
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="flex items-center gap-2 text-base sm:text-lg font-semibold text-slate-50">
+                      <FiUsers className="h-5 w-5" />
+                      Projects &amp; Research
+                    </h3>
+                    <ul className="mt-2 space-y-1 list-disc list-inside">
+                      <li>2014: Impact of Taxation on the Growth of SMEs in Buea Municipality</li>
+                      <li>2020: Tax Administration and Compliance Level of Taxpayers in Fako Division, Southwest Cameroon</li>
+                      <li>2022: Financial Literacy and Performance of SMEs in Fako Division, Southwest Cameroon</li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="flex items-center gap-2 text-base sm:text-lg font-semibold text-slate-50">
+                      <FiUsers className="h-5 w-5" />
+                      Skills
+                    </h3>
+                    <ul className="mt-2 space-y-1 list-disc list-inside">
+                      <li>
+                        <span className="font-semibold">Project &amp; Organizational Management:</span> Leadership, team
+                        coordination, goal-setting, scheduling, and decision-making.
+                      </li>
+                      <li>
+                        <span className="font-semibold">Financial Management:</span> Budgeting, reporting, and strategic
+                        planning.
+                      </li>
+                      <li>
+                        <span className="font-semibold">Communication &amp; Networking:</span> Public speaking, stakeholder
+                        engagement, and cross-cultural collaboration.
+                      </li>
+                      <li>
+                        <span className="font-semibold">Technical Skills:</span> MS Word, Excel, PowerPoint (Excellent);
+                        MS Publisher (Good).
+                      </li>
+                      <li>
+                        <span className="font-semibold">Languages:</span> English (Excellent), French (Average), Korean (Average).
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
               <p className="text-center text-xs sm:text-sm text-slate-200/80">
-                Stay tuned more Eva Helpful Global country teams, stories, and features are on
-                the way.
+                Stay tuned more Eva Helpful Global country teams, stories, and features are on the way.
               </p>
             </div>
           </section>

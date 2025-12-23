@@ -20,87 +20,62 @@ export default function AwahBeltineSirriPage() {
               </div>
               <div>
                 <h1 className="text-3xl sm:text-4xl font-semibold text-slate-50">
-                  Mrs. Awah Beltine Sirri
+                  Awah Beltine Sirri
                 </h1>
-                <p className="text-sm text-orange-200">Vice President, Eva Helpful Foundation</p>
+                <p className="text-sm text-orange-200">
+                  Vice President (General / Deputy President), Eva Helpful Foundation
+                </p>
               </div>
             </div>
 
             <div className="glass-panel flex-1 space-y-5 p-6 sm:p-8 text-sm sm:text-base">
-              <div className="space-y-2">
+              <div className="space-y-4">
                 <h2 className="flex items-center gap-2 text-lg font-semibold text-orange-300">
                   <FiUsers className="h-5 w-5" />
                   Leadership Profile
                 </h2>
                 <p className="text-slate-100/85">
-                  Mrs. Awah Beltine Sirri is an accomplished education specialist, development advocate, and
-                  administrator with over a decade of progressive experience in youth empowerment, gender
-                  education, and community-focused program management. She provides critical strategic
-                  leadership, program oversight, and partnership coordination to advance the Foundation&apos;s
-                  mission.
+                  Awah Beltine Sirri is an education specialist, development advocate and organisational leader
+                  with over a decade of progressive experience across teaching, curriculum development, editorial
+                  services and community-focused programme management. Her professional journey reflects a
+                  consistent commitment to empowering young people, advancing gender equity and strengthening
+                  educational systems within Cameroon.
                 </p>
-              </div>
-
-              <div className="space-y-2">
-                <h3 className="flex items-center gap-2 text-sm font-semibold text-orange-300">
-                  <FiBookOpen className="h-4 w-4" />
-                  Key Expertise Areas
-                </h3>
-                <ul className="list-disc space-y-1 pl-5 text-slate-100/85 text-xs sm:text-sm">
-                  <li>
-                    <span className="font-semibold">Educational Leadership:</span> curriculum design,
-                    learner assessment, instructional leadership, and academic program coordination.
-                  </li>
-                  <li>
-                    <span className="font-semibold">Development Advocacy:</span> youth empowerment, gender
-                    equity, public relations, and stakeholder mobilization for social impact initiatives.
-                  </li>
-                  <li>
-                    <span className="font-semibold">Editorial &amp; Research:</span> experienced editor,
-                    proofreader, and qualitative data transcriber, bringing academic rigour to research
-                    projects.
-                  </li>
-                </ul>
-              </div>
-
-              <div className="space-y-2">
-                <h3 className="flex items-center gap-2 text-sm font-semibold text-orange-300">
-                  <FiUsers className="h-4 w-4" />
-                  Professional Background
-                </h3>
-                <ul className="list-disc space-y-1 pl-5 text-slate-100/85 text-xs sm:text-sm">
-                  <li>
-                    Has served as an English Language Instructor for several years at institutions including
-                    Lycée de Nkolpoblo and Government Bilingual Secondary School Akougou.
-                  </li>
-                  <li>
-                    Held instructional leadership roles as Deputy Head of Department and English Club
-                    Coordinator.
-                  </li>
-                  <li>
-                    Championed youth engagement and gender-focused initiatives through roles in organizations
-                    like Girls Strength and Gender Education and Deserve.
-                  </li>
-                  <li>
-                    Co-author of <span className="italic">Modern Primary English Pupils&apos; Books 3 and 4</span>,
-                    contributing to foundational literacy development.
-                  </li>
-                </ul>
-              </div>
-
-              <div className="space-y-2">
-                <h3 className="flex items-center gap-2 text-sm font-semibold text-orange-300">
-                  <FiHeart className="h-4 w-4" />
-                  Academic Credentials
-                </h3>
-                <ul className="list-disc space-y-1 pl-5 text-slate-100/85 text-xs sm:text-sm">
-                  <li>
-                    Master of Science in Education (Curriculum and Evaluation) – in progress, University of
-                    Yaoundé I.
-                  </li>
-                  <li>Bachelor of Arts in English Language – University of Yaoundé I.</li>
-                  <li>DIPES I – English Language – Higher Teachers Training College, University of Maroua.</li>
-                </ul>
+                <p className="text-slate-100/85">
+                  She currently serves as Vice President of the Eva Helpful Foundation, where she provides
+                  strategic leadership in program development, partnership coordination and organisational
+                  governance. Her contributions support the Foundation&apos;s mission to promote social welfare,
+                  educational advancement, and community resilience.
+                </p>
+                <p className="text-slate-100/85">
+                  With a strong academic foundation in English Language and ongoing postgraduate training in
+                  Curriculum and Evaluation at the University of Yaoundé I, she combines technical expertise with
+                  a practical understanding of classroom realities and learner-centred methodologies.
+                </p>
+                <p className="text-slate-100/85">
+                  She has served as an English Language Instructor for several years at Lycée de Nkolpoblo and
+                  Government Bilingual Secondary School Akougou, contributing to instructional leadership as
+                  Deputy Head of Department and Coordinator of English Club initiatives. Her work in these
+                  institutions reflects her proficiency in learner assessment, mentoring, counselling and academic
+                  program coordination.
+                </p>
+                <p className="text-slate-100/85">
+                  Beyond formal education, she has championed youth engagement and gender-focused initiatives
+                  through her roles in organisations such as Girls Strength and Gender Education and Deserve,
+                  where she has worked in public relations, advocacy and stakeholder mobilisation. She has also
+                  collaborated with AJ Research Consulting as an editor and qualitative data transcriber, bringing
+                  editorial precision and academic rigor to research projects.
+                </p>
+                <p className="text-slate-100/85">
+                  As a contributor to curriculum enrichment, she has co-authored Modern Primary English Pupils’
+                  Books 3 and 4, published by Quality Prints, supporting foundational literacy development for
+                  young learners.
+                </p>
+                <p className="text-slate-100/85">
+                  Driven by integrity, service and a passion for community development, Awah Beltine Sirri
+                  continues to dedicate her expertise to promoting quality education, strengthening youth
+                  capacities and advancing social impact initiatives across Cameroon and beyond.
+                </p>
               </div>
             </div>
           </section>
