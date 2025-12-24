@@ -121,7 +121,7 @@ export default function Home() {
             <Reveal as="div" direction="right">
               <a
                 href="#media"
-                className="flex-1 w-full max-w-xl glass-panel p-4 sm:p-6 lg:p-8 cursor-pointer bg-black/30 hover:bg-black/40 transition-colors"
+                className="flex-1 w-full max-w-xl p-4 sm:p-6 lg:p-8 cursor-pointer rounded-3xl border border-white/25 bg-white/10 backdrop-blur-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.15)] hover:bg-white/15 hover:border-white/35 transition-all duration-300"
               >
                 <div className="grid grid-cols-2 gap-3 sm:gap-4">
                   <div className="relative col-span-2 aspect-[16/9] overflow-hidden rounded-xl border border-white/15 bg-black/30">
@@ -479,9 +479,12 @@ export default function Home() {
           <Reveal as="section" className="max-w-6xl mx-auto space-y-6" id="team">
             <header className="flex flex-col gap-2">
               <p className="text-xs font-semibold tracking-[0.2em] uppercase text-orange-300">
-                Administrative Team
+                Leadership Team
               </p>
-              <h2 className="text-2xl sm:text-3xl font-semibold text-slate-50">Administrative Team</h2>
+              <h2 className="text-2xl sm:text-3xl font-semibold text-slate-50 flex items-center gap-3">
+                <FiUsers className="h-7 w-7 text-orange-300" />
+                Leadership Team
+              </h2>
             </header>
 
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -518,91 +521,45 @@ export default function Home() {
                 <div className="relative h-20 w-20 sm:h-24 sm:w-24 overflow-hidden rounded-full border border-white/20 bg-black/40">
                   <Image
                     src="/awah beltine.jpg"
-                    alt="Mrs. Awah Beltine Sirri - Vice President of Eva Helpful Foundation"
+                    alt="Awah Beltine Sirri - Vice President & Co-Founder of Eva Helpful Foundation"
                     fill
                     className="object-cover object-top"
                     sizes="(max-width: 640px) 80px, 96px"
                   />
                 </div>
                 <div className="space-y-1 text-sm sm:text-base">
-                  <h3 className="text-base sm:text-lg font-semibold text-slate-50">Mrs. Awah Beltine Sirri</h3>
+                  <h3 className="text-base sm:text-lg font-semibold text-slate-50">Awah Beltine Sirri</h3>
                   <p className="text-xs sm:text-sm text-orange-200">
-                    Vice President (General / Deputy President), Eva Helpful Foundation
+                    Vice President & Co-Founder (General / Deputy President), Eva Helpful Foundation
                   </p>
                   <p className="text-[11px] sm:text-xs text-slate-300/85">Country of residence: Cameroon</p>
                 </div>
               </a>
 
-              {/* Creative Director */}
+              {/* 3. Vice President – Governance / Compliance */}
               <a
-                href="/team/ndi-brain-webje"
+                href="/team/professor-mokube-mathias-itoe"
                 className="glass-panel flex flex-col items-center gap-3 p-5 sm:p-6 text-center hover:bg-white/10 transition-colors"
               >
                 <div className="relative h-20 w-20 sm:h-24 sm:w-24 overflow-hidden rounded-full border border-white/20 bg-black/40">
                   <Image
-                    src="/ndi brain.jpg"
-                    alt="Mr. Ndi Brain Webje - Creative Director at Eva Helpful Foundation"
+                    src="/Professor Mokube Mathias Itoe, PhD.png"
+                    alt="Professor Mokube Mathias Itoe - VP Governance at Eva Helpful Foundation"
                     fill
                     className="object-cover object-top"
                     sizes="(max-width: 640px) 80px, 96px"
                   />
                 </div>
                 <div className="space-y-1 text-sm sm:text-base">
-                  <h3 className="text-base sm:text-lg font-semibold text-slate-50">Mr. Ndi Brain Webje</h3>
+                  <h3 className="text-base sm:text-lg font-semibold text-slate-50">Professor Mokube Mathias Itoe, PhD</h3>
                   <p className="text-xs sm:text-sm text-orange-200">
-                    Creative Director &amp; Lead Visual Communications Officer
+                    Vice President – Governance / Compliance, Eva Helpful Foundation
                   </p>
                   <p className="text-[11px] sm:text-xs text-slate-300/85">Country of residence: Cameroon</p>
                 </div>
               </a>
 
-              {/* Director of Grants Management and Audit */}
-              <a
-                href="/team/ndam-njoya-inusa"
-                className="glass-panel flex flex-col items-center gap-3 p-5 sm:p-6 text-center hover:bg-white/10 transition-colors"
-              >
-                <div className="relative h-20 w-20 sm:h-24 sm:w-24 overflow-hidden rounded-full border border-white/20 bg-black/40">
-                  <Image
-                    src="/ndam njoya.jpg"
-                    alt="Ndam Njoya Inusa - Director of Grants Management at Eva Helpful Foundation"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 640px) 80px, 96px"
-                  />
-                </div>
-                <div className="space-y-1 text-sm sm:text-base">
-                  <h3 className="text-base sm:text-lg font-semibold text-slate-50">NDAM NJOYA INUSA</h3>
-                  <p className="text-xs sm:text-sm text-orange-200">
-                    Director of Grants Management and Audit – Eva Helpful
-                  </p>
-                  <p className="text-[11px] sm:text-xs text-slate-300/85">Country of residence: Cameroon</p>
-                </div>
-              </a>
-
-              {/* Coordinator – Digital Communications and Protocol */}
-              <a
-                href="/team/levi-wam-mfua"
-                className="glass-panel flex flex-col items-center gap-3 p-5 sm:p-6 text-center hover:bg-white/10 transition-colors"
-              >
-                <div className="relative h-20 w-20 sm:h-24 sm:w-24 overflow-hidden rounded-full border border-white/20 bg-black/40">
-                  <Image
-                    src="/lewi wam.png"
-                    alt="Levi Wam Mfua - Digital Communications Coordinator at Eva Helpful Foundation"
-                    fill
-                    className="object-cover object-top"
-                    sizes="(max-width: 640px) 80px, 96px"
-                  />
-                </div>
-                <div className="space-y-1 text-sm sm:text-base">
-                  <h3 className="text-base sm:text-lg font-semibold text-slate-50">Levi Wam Mfua</h3>
-                  <p className="text-xs sm:text-sm text-orange-200">
-                    Coordinator – Digital Communications and Protocol
-                  </p>
-                  <p className="text-[11px] sm:text-xs text-slate-300/85">Country of residence: Cameroon</p>
-                </div>
-              </a>
-
-              {/* Director of Research, Training and Capacity Building */}
+              {/* 4. Dr. Sylvanus - Director of Research */}
               <a
                 href="/team/ngoata-sylvanus-diangha"
                 className="glass-panel flex flex-col items-center gap-3 p-5 sm:p-6 text-center hover:bg-white/10 transition-colors"
@@ -620,6 +577,52 @@ export default function Home() {
                   <h3 className="text-base sm:text-lg font-semibold text-slate-50">Dr. Ngoata Sylvanus Diangha</h3>
                   <p className="text-xs sm:text-sm text-orange-200">
                     Director of Research, Training, and Capacity Building – Eva Helpful
+                  </p>
+                  <p className="text-[11px] sm:text-xs text-slate-300/85">Country of residence: Cameroon</p>
+                </div>
+              </a>
+
+              {/* 5. Ndifon - Director of Adolescent & Youth Mentoring */}
+              <a
+                href="/team/ndifon-gervais-nuvadga"
+                className="glass-panel flex flex-col items-center gap-3 p-5 sm:p-6 text-center hover:bg-white/10 transition-colors"
+              >
+                <div className="relative h-20 w-20 sm:h-24 sm:w-24 overflow-hidden rounded-full border border-white/20 bg-black/40">
+                  <Image
+                    src="/Ndifon Gervais Nuvadga.png"
+                    alt="Ndifon Gervais Nuvadga - Director of Youth Mentoring at Eva Helpful Foundation"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 640px) 80px, 96px"
+                  />
+                </div>
+                <div className="space-y-1 text-sm sm:text-base">
+                  <h3 className="text-base sm:text-lg font-semibold text-slate-50">Ndifon Gervais Nuvadga</h3>
+                  <p className="text-xs sm:text-sm text-orange-200">
+                    Director of Adolescent &amp; Youth Mentoring Services, Eva Helpful Foundation
+                  </p>
+                  <p className="text-[11px] sm:text-xs text-slate-300/85">Country of residence: Belgium</p>
+                </div>
+              </a>
+
+              {/* 6. Director of Grants Management and Audit */}
+              <a
+                href="/team/ndam-njoya-inusa"
+                className="glass-panel flex flex-col items-center gap-3 p-5 sm:p-6 text-center hover:bg-white/10 transition-colors"
+              >
+                <div className="relative h-20 w-20 sm:h-24 sm:w-24 overflow-hidden rounded-full border border-white/20 bg-black/40">
+                  <Image
+                    src="/ndam njoya.jpg"
+                    alt="Ndam Njoya Inusa - Director of Grants Management at Eva Helpful Foundation"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 640px) 80px, 96px"
+                  />
+                </div>
+                <div className="space-y-1 text-sm sm:text-base">
+                  <h3 className="text-base sm:text-lg font-semibold text-slate-50">Ndam Njoya Inusa</h3>
+                  <p className="text-xs sm:text-sm text-orange-200">
+                    Director of Grants Management and Audit – Eva Helpful
                   </p>
                   <p className="text-[11px] sm:text-xs text-slate-300/85">Country of residence: Cameroon</p>
                 </div>
@@ -643,7 +646,7 @@ export default function Home() {
                 href="/team/administrative-team"
                 className="inline-flex items-center justify-center rounded-full border border-orange-400/70 bg-orange-500/20 px-7 py-2.5 text-sm sm:text-base font-semibold text-orange-100 shadow-[0_12px_35px_rgba(248,250,252,0.18)] backdrop-blur-xl hover:bg-orange-500/30 hover:border-orange-300 transition-colors"
               >
-                View all Administrative Team
+                View all Leadership Team
               </a>
             </div>
           </Reveal>

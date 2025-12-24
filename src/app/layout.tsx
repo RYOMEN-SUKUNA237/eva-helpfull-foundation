@@ -1,14 +1,21 @@
 import type { Metadata, Viewport } from "next";
 import Link from "next/link";
-import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
+import { Inter, Outfit, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import "react-phone-number-input/style.css";
 import { Footer } from "@/components/layout/Footer";
 
-const sans = Plus_Jakarta_Sans({
+const sans = Inter({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-geist-sans",
+  display: "swap",
+});
+
+const display = Outfit({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-display",
   display: "swap",
 });
 
@@ -215,7 +222,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${sans.variable} ${mono.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${sans.variable} ${display.variable} ${mono.variable}`}>
       <head>
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

@@ -11,7 +11,8 @@ export default function EndorsersAndValueAdvocatesPage() {
         <main className="pt-24 pb-20 px-4 sm:px-6 lg:px-8 flex-1 flex flex-col">
           <section className="mx-auto flex w-full max-w-5xl flex-col gap-8">
             <div className="text-center space-y-3">
-              <h1 className="text-3xl sm:text-4xl font-semibold text-slate-50">
+              <h1 className="text-3xl sm:text-4xl font-semibold text-slate-50 flex items-center justify-center gap-3">
+                <FiHeart className="h-8 w-8 text-orange-300" />
                 Endorsers &amp; Value Advocates
               </h1>
               <p className="text-sm sm:text-base text-slate-100/80 max-w-2xl mx-auto">
@@ -22,8 +23,12 @@ export default function EndorsersAndValueAdvocatesPage() {
 
             <div className="grid gap-5 md:grid-cols-3 text-sm">
               <article className="glass-panel p-5 sm:p-6 space-y-2 text-center">
-                <div className="h-20 w-20 sm:h-24 sm:w-24 mx-auto rounded-full border border-white/20 bg-black/40 flex items-center justify-center text-sm font-semibold text-slate-100/90">
-                  PF
+                <div className="h-20 w-20 sm:h-24 sm:w-24 mx-auto overflow-hidden rounded-full border border-white/20 bg-black/40">
+                  <img
+                    src="/Professor%20Fonkoua.jpeg"
+                    alt="Professor Pierre Fonkoua"
+                    className="h-full w-full object-cover"
+                  />
                 </div>
                 <h2 className="text-base sm:text-lg font-semibold text-slate-50 mt-1">
                   Professor Pierre Fonkoua
@@ -42,8 +47,12 @@ export default function EndorsersAndValueAdvocatesPage() {
               </article>
 
               <article className="glass-panel p-5 sm:p-6 space-y-2 text-center">
-                <div className="h-20 w-20 sm:h-24 sm:w-24 mx-auto rounded-full border border-white/20 bg-black/40 flex items-center justify-center text-sm font-semibold text-slate-100/90">
-                  LL
+                <div className="h-20 w-20 sm:h-24 sm:w-24 mx-auto overflow-hidden rounded-full border border-white/20 bg-black/40">
+                  <img
+                    src="/liz%20lum.jpeg"
+                    alt="Liz Lum"
+                    className="h-full w-full object-cover"
+                  />
                 </div>
                 <h2 className="text-base sm:text-lg font-semibold text-slate-50 mt-1">Liz Lum</h2>
                 <p className="text-[11px] sm:text-xs text-orange-200">
@@ -83,7 +92,7 @@ export default function EndorsersAndValueAdvocatesPage() {
               <article className="glass-panel p-5 sm:p-6 space-y-2 text-center">
                 <div className="h-20 w-20 sm:h-24 sm:w-24 mx-auto overflow-hidden rounded-full border border-white/20 bg-black/40">
                   <img
-                    src="/Dr%20Colin%20Agabalinda.png"
+                    src="/Dr.%20Colin%20Agabalinda.png"
                     alt="Dr. Colin Agabalinda"
                     className="h-full w-full object-cover"
                   />
@@ -118,7 +127,7 @@ export default function EndorsersAndValueAdvocatesPage() {
                   Professor Kehbuma Langmia
                 </h2>
                 <p className="text-[11px] sm:text-xs text-orange-200">
-                  Professor, Department of Strategic, Legal, and Management Communications, Howard University
+                  Professor, Department of Strategic, Legal, and Management Communications, Howard University – Washington DC, USA
                 </p>
                 <p className="text-slate-100/85 text-xs sm:text-sm">
                   Warmly endorses Eva Helpful Foundation for its commitment to promoting positive values, ethics

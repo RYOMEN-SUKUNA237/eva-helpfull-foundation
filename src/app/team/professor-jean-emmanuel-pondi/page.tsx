@@ -11,7 +11,13 @@ export default function ProfessorJeanEmmanuelPondiPage() {
         <main className="pt-24 pb-20 px-4 sm:px-6 lg:px-8 flex-1 flex flex-col">
           <section className="mx-auto flex w-full max-w-5xl flex-col gap-8">
             <div className="flex flex-col items-center gap-4 text-center">
-              <div className="h-32 w-32 sm:h-40 sm:w-40 overflow-hidden rounded-full border border-white/20 bg-black/40" />
+              <div className="h-32 w-32 sm:h-40 sm:w-40 overflow-hidden rounded-full border border-white/20 bg-black/40">
+                <img
+                  src="/jean%20emmanuel%20pondi.jpg"
+                  alt="Professor Jean-Emmanuel Pondi"
+                  className="h-full w-full object-cover"
+                />
+              </div>
               <div>
                 <h1 className="text-3xl sm:text-4xl font-semibold text-slate-50">
                   Professor Jean-Emmanuel Pondi

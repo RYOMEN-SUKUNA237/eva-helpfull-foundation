@@ -14,7 +14,7 @@ export default function AwahBeltineSirriPage() {
               <div className="h-32 w-32 sm:h-40 sm:w-40 overflow-hidden rounded-full border border-white/20 bg-black/40">
                 <img
                   src="/awah%20beltine.jpg"
-                  alt="Mrs. Awah Beltine Sirri"
+                  alt="Awah Beltine Sirri"
                   className="h-full w-full object-cover"
                 />
               </div>
@@ -23,7 +23,7 @@ export default function AwahBeltineSirriPage() {
                   Awah Beltine Sirri
                 </h1>
                 <p className="text-sm text-orange-200">
-                  Vice President (General / Deputy President), Eva Helpful Foundation
+                  Vice President & Co-Founder (General / Deputy President), Eva Helpful Foundation
                 </p>
               </div>
             </div>
