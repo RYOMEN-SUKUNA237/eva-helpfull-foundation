@@ -1,4 +1,53 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.evahelpful.org";
+
+export const metadata: Metadata = {
+  title: "Blog | Parenting Tips & Values Education Resources",
+  description:
+    "Read practical stories, parenting guides, and insights on values-based education from Eva Helpful Foundation. Resources for parents, teachers, and community leaders in Cameroon.",
+  keywords: [
+    "parenting blog Cameroon",
+    "values education articles",
+    "teaching children values",
+    "emotional intelligence tips",
+    "African parenting resources",
+    "character development blog",
+    "Eva Helpful Foundation blog",
+    "parenting tips Africa",
+    "how to teach kids honesty",
+    "raise respectful children",
+    "teaching empathy to children",
+    "child behavior tips",
+    "youth guidance Cameroon",
+    "family values blog",
+    "positive parenting",
+    "discipline with love",
+    "moral lessons for kids",
+    "stories for children values",
+    "parent guide Cameroon",
+    "teen advice Africa",
+  ],
+  openGraph: {
+    title: "Blog | Eva Helpful Foundation",
+    description:
+      "Practical stories, parenting guides, and insights on values-based education for parents and teachers.",
+    url: `${siteUrl}/blog`,
+    siteName: "Eva Helpful Foundation",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog | Eva Helpful Foundation",
+    description:
+      "Practical stories and parenting guides on values-based education.",
+  },
+  alternates: {
+    canonical: `${siteUrl}/blog`,
+  },
+};
 
 export default function BlogIndexPage() {
   return (

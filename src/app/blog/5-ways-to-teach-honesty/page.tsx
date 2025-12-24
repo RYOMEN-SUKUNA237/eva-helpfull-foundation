@@ -2,24 +2,121 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-const siteUrl = "https://example.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.evahelpful.org";
 
 export const metadata: Metadata = {
-  title: "5 Simple Ways to Teach Honesty to Your Child This Week | Eva Helpful Foundation",
+  title: "5 Simple Ways to Teach Honesty to Your Child This Week",
   description:
     "Struggling to teach values at home? Discover 5 practical tips to encourage honesty and build trust with your children. A guide for Cameroonian parents from Eva Helpful Foundation.",
+  keywords: [
+    "teaching honesty to children",
+    "parenting tips Cameroon",
+    "building trust with children",
+    "values-based parenting",
+    "moral education at home",
+    "character development children",
+    "honesty activities for kids",
+    "African parenting values",
+    "family values education",
+  ],
+  authors: [{ name: "Eva Helpful Foundation" }],
   openGraph: {
-    title: "5 Simple Ways to Teach Honesty to Your Child This Week | Eva Helpful Foundation",
+    title: "5 Simple Ways to Teach Honesty to Your Child This Week",
     description:
       "Struggling to teach values at home? Discover 5 practical tips to encourage honesty and build trust with your children. A guide for Cameroonian parents from Eva Helpful Foundation.",
     url: `${siteUrl}/blog/5-ways-to-teach-honesty`,
+    siteName: "Eva Helpful Foundation",
+    locale: "en_US",
     type: "article",
+    publishedTime: "2025-12-20T00:00:00.000Z",
+    authors: ["Eva Helpful Foundation"],
+    images: [
+      {
+        url: `${siteUrl}/images/parent-teaching-child-values.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Parent teaching child values at home in Cameroon",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "5 Simple Ways to Teach Honesty to Your Child This Week",
+    description:
+      "Practical tips to encourage honesty and build trust with your children at home.",
+    images: [`${siteUrl}/images/parent-teaching-child-values.jpg`],
+  },
+  alternates: {
+    canonical: `${siteUrl}/blog/5-ways-to-teach-honesty`,
   },
 };
 
 export default function TeachHonestyBlogPost() {
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "5 Simple Ways to Teach Honesty to Your Child This Week",
+    description:
+      "Struggling to teach values at home? Discover 5 practical tips to encourage honesty and build trust with your children. A guide for Cameroonian parents from Eva Helpful Foundation.",
+    image: `${siteUrl}/images/parent-teaching-child-values.jpg`,
+    author: {
+      "@type": "Organization",
+      name: "Eva Helpful Foundation",
+      url: siteUrl,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Eva Helpful Foundation",
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/photo_2025-12-05_09-46-53.jpg`,
+      },
+    },
+    datePublished: "2025-12-20T00:00:00.000Z",
+    dateModified: "2025-12-20T00:00:00.000Z",
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/blog/5-ways-to-teach-honesty`,
+    },
+    keywords:
+      "teaching honesty to children, parenting tips Cameroon, building trust with children, values-based parenting, moral education at home",
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: `${siteUrl}/blog`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "5 Ways to Teach Honesty",
+        item: `${siteUrl}/blog/5-ways-to-teach-honesty`,
+      },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-slate-950 text-slate-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-10 px-4 pb-16 pt-28 sm:px-6 lg:px-8">
         <div className="mb-2 flex justify-between text-[11px] sm:text-xs text-slate-300/80">
           <Link

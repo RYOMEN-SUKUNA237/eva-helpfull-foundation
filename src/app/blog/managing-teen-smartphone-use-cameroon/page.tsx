@@ -2,26 +2,126 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-const siteUrl = "https://example.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.evahelpful.org";
 
 export const metadata: Metadata = {
   title:
-    "The Silent Epidemic: A Cameroonian Parents Guide to Managing Teen Smartphone Use | Eva Helpful Foundation",
+    "The Silent Epidemic: A Cameroonian Parent's Guide to Managing Teen Smartphone Use",
   description:
     "Is your teen constantly on their phone? Discover practical strategies for Cameroonian parents to manage screen time, build trust, and restore family connection.",
+  keywords: [
+    "managing smartphone use",
+    "screen time limits for teens",
+    "internet safety Cameroon",
+    "parenting digital natives",
+    "teen phone addiction",
+    "family digital contract",
+    "digital wellness for teens",
+    "Cameroon parenting tips",
+    "smartphone boundaries",
+    "teen mental health",
+  ],
+  authors: [{ name: "Eva Helpful Foundation" }],
   openGraph: {
     title:
-      "The Silent Epidemic: A Cameroonian Parents Guide to Managing Teen Smartphone Use | Eva Helpful Foundation",
+      "The Silent Epidemic: A Cameroonian Parent's Guide to Managing Teen Smartphone Use",
     description:
       "Is your teen constantly on their phone? Discover practical strategies for Cameroonian parents to manage screen time, build trust, and restore family connection.",
     url: `${siteUrl}/blog/managing-teen-smartphone-use-cameroon`,
+    siteName: "Eva Helpful Foundation",
+    locale: "en_US",
     type: "article",
+    publishedTime: "2025-12-23T00:00:00.000Z",
+    authors: ["Eva Helpful Foundation"],
+    images: [
+      {
+        url: `${siteUrl}/distracted%20teen%20at%20dinner.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "African teenager distracted by smartphone at family dinner table in Cameroon",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "The Silent Epidemic: A Cameroonian Parent's Guide to Managing Teen Smartphone Use",
+    description:
+      "Practical strategies for Cameroonian parents to manage teen screen time, build trust, and restore family connection.",
+    images: [`${siteUrl}/distracted%20teen%20at%20dinner.jpg`],
+  },
+  alternates: {
+    canonical: `${siteUrl}/blog/managing-teen-smartphone-use-cameroon`,
   },
 };
 
 export default function ManagingTeenSmartphoneUseBlogPost() {
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline:
+      "The Silent Epidemic: A Cameroonian Parent's Guide to Managing Teen Smartphone Use",
+    description:
+      "Is your teen constantly on their phone? Discover practical strategies for Cameroonian parents to manage screen time, build trust, and restore family connection.",
+    image: `${siteUrl}/distracted%20teen%20at%20dinner.jpg`,
+    author: {
+      "@type": "Organization",
+      name: "Eva Helpful Foundation",
+      url: siteUrl,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Eva Helpful Foundation",
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/photo_2025-12-05_09-46-53.jpg`,
+      },
+    },
+    datePublished: "2025-12-23T00:00:00.000Z",
+    dateModified: "2025-12-23T00:00:00.000Z",
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/blog/managing-teen-smartphone-use-cameroon`,
+    },
+    keywords:
+      "managing smartphone use, screen time limits for teens, internet safety Cameroon, parenting digital natives, teen phone addiction",
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: `${siteUrl}/blog`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Managing Teen Smartphone Use",
+        item: `${siteUrl}/blog/managing-teen-smartphone-use-cameroon`,
+      },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-slate-950 text-slate-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-10 px-4 pb-16 pt-28 sm:px-6 lg:px-8">
         <div className="mb-2 flex justify-between text-[11px] sm:text-xs text-slate-300/80">
           <Link

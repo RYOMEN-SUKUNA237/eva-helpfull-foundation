@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Navbar } from "@/components/layout/Navbar";
 import { BackgroundScene } from "@/components/three/BackgroundScene";
 import { Reveal } from "@/components/animation/Reveal";
@@ -17,10 +18,36 @@ import {
 } from "react-icons/fi";
 import { DOCUMENTATIONS } from "@/data/documentations";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.evahelpful.org";
+
 export const metadata: Metadata = {
-  title: "Home",
+  title: "Home | Building a Generation Grounded in Values",
   description:
-    "Eva Helpful Foundation builds a generation grounded in values that protect the future, through values-based education, school partnerships, and community programs.",
+    "Eva Helpful Foundation builds a generation grounded in values that protect the future through values-based education, school partnerships, and community programs in Cameroon.",
+  keywords: [
+    "Eva Helpful Foundation",
+    "Eva Helpful",
+    "values education Cameroon",
+    "character development",
+    "youth empowerment",
+    "school partnerships Africa",
+    "parenting values",
+    "emotional intelligence children",
+    "children values Cameroon",
+    "teach kids values",
+    "moral education",
+    "youth programs Yaounde",
+    "school outreach",
+    "child mentorship",
+    "respect empathy honesty",
+    "raising responsible children",
+    "nonprofit education Africa",
+    "volunteer with children",
+    "donate to children education",
+  ],
+  alternates: {
+    canonical: siteUrl,
+  },
 };
 
 export default function Home() {
@@ -97,25 +124,32 @@ export default function Home() {
                 className="flex-1 w-full max-w-xl glass-panel p-4 sm:p-6 lg:p-8 cursor-pointer bg-black/30 hover:bg-black/40 transition-colors"
               >
                 <div className="grid grid-cols-2 gap-3 sm:gap-4">
-                  <div className="col-span-2 aspect-[16/9] overflow-hidden rounded-xl border border-white/15 bg-black/30">
-                    <img
+                  <div className="relative col-span-2 aspect-[16/9] overflow-hidden rounded-xl border border-white/15 bg-black/30">
+                    <Image
                       src="/images/photo_1_2025-12-03_18-28-46.jpg"
-                      alt="Eva Helpful Foundation school outreach group photo"
-                      className="h-full w-full object-cover"
+                      alt="Eva Helpful Foundation school outreach group photo with students and volunteers"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
+                      priority
                     />
                   </div>
-                  <div className="aspect-[4/5] overflow-hidden rounded-xl border border-white/15 bg-black/30">
-                    <img
+                  <div className="relative aspect-[4/5] overflow-hidden rounded-xl border border-white/15 bg-black/30">
+                    <Image
                       src="/images/photo_4_2025-12-03_18-28-46.jpg"
-                      alt="Students listening during an Eva Helpful session"
-                      className="h-full w-full object-cover"
+                      alt="Students listening during an Eva Helpful Foundation values education session"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 50vw, 280px"
                     />
                   </div>
-                  <div className="aspect-[4/5] overflow-hidden rounded-xl border border-white/15 bg-black/30">
-                    <img
+                  <div className="relative aspect-[4/5] overflow-hidden rounded-xl border border-white/15 bg-black/30">
+                    <Image
                       src="/images/photo_7_2025-12-03_18-28-46.jpg"
-                      alt="Volunteers and facilitators with learners"
-                      className="h-full w-full object-cover"
+                      alt="Eva Helpful Foundation volunteers and facilitators with learners in Cameroon"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 50vw, 280px"
                     />
                   </div>
                 </div>
@@ -294,7 +328,7 @@ export default function Home() {
 
               <div className="grid gap-6 md:grid-cols-3 text-sm">
                 <div className="md:col-span-2 space-y-4">
-                  <h3 className="text-lg font-semibold text-orange-300">Why we exist  the problem</h3>
+                  <h3 className="text-lg font-semibold text-orange-300">Why we exist: the problem</h3>
                   <div className="space-y-3">
                     <h4 className="flex items-center gap-2 text-sm font-semibold text-slate-50">
                       <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-orange-500/20 text-[11px] font-bold text-orange-300">
@@ -305,7 +339,7 @@ export default function Home() {
                     <p className="text-slate-100/85">
                       Many parents work long hours, leaving little time to guide and mentor their children.
                       Without meaningful parental presence, children often turn to social media and peers for
-                      directioncreating emotional gaps, identity confusion, and weakened character foundations.
+                      direction, creating emotional gaps, identity confusion, and weakened character foundations.
                     </p>
                   </div>
                   <div className="space-y-3">
@@ -339,7 +373,7 @@ export default function Home() {
                 <div className="space-y-3 text-sm">
                   <h3 className="text-lg font-semibold text-orange-300">Our response to a crisis</h3>
                   <p className="text-slate-100/85">
-                    Cameroon has witnessed escalating violence in schools and communitiesfrom teacher
+                    Cameroon has witnessed escalating violence in schools and communities—from teacher
                     killings and student-on-student attacks to rising sexual violence and abuse. These
                     incidents reveal deep moral erosion and emotional instability among youths.
                   </p>
@@ -456,11 +490,13 @@ export default function Home() {
                 href="/team/professor-alain-isoh"
                 className="glass-panel flex flex-col items-center gap-3 p-5 sm:p-6 text-center hover:bg-white/10 transition-colors"
               >
-                <div className="h-20 w-20 sm:h-24 sm:w-24 overflow-hidden rounded-full border border-white/20 bg-black/40">
-                  <img
-                    src="/uppdate%20prof%20alain.jpeg"
-                    alt="Professor Alain Vilard Ndi Isoh"
-                    className="h-full w-full object-cover object-top"
+                <div className="relative h-20 w-20 sm:h-24 sm:w-24 overflow-hidden rounded-full border border-white/20 bg-black/40">
+                  <Image
+                    src="/uppdate prof alain.jpeg"
+                    alt="Professor Alain Vilard Ndi Isoh - Founder of Eva Helpful Foundation"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 640px) 80px, 96px"
                   />
                 </div>
                 <div className="space-y-1 text-sm sm:text-base">
@@ -479,11 +515,13 @@ export default function Home() {
                 href="/team/awah-beltine-sirri"
                 className="glass-panel flex flex-col items-center gap-3 p-5 sm:p-6 text-center hover:bg-white/10 transition-colors"
               >
-                <div className="h-20 w-20 sm:h-24 sm:w-24 overflow-hidden rounded-full border border-white/20 bg-black/40">
-                  <img
-                    src="/awah%20beltine.jpg"
-                    alt="Mrs. Awah Beltine Sirri"
-                    className="h-full w-full object-cover object-top"
+                <div className="relative h-20 w-20 sm:h-24 sm:w-24 overflow-hidden rounded-full border border-white/20 bg-black/40">
+                  <Image
+                    src="/awah beltine.jpg"
+                    alt="Mrs. Awah Beltine Sirri - Vice President of Eva Helpful Foundation"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 640px) 80px, 96px"
                   />
                 </div>
                 <div className="space-y-1 text-sm sm:text-base">
@@ -500,11 +538,13 @@ export default function Home() {
                 href="/team/ndi-brain-webje"
                 className="glass-panel flex flex-col items-center gap-3 p-5 sm:p-6 text-center hover:bg-white/10 transition-colors"
               >
-                <div className="h-20 w-20 sm:h-24 sm:w-24 overflow-hidden rounded-full border border-white/20 bg-black/40">
-                  <img
-                    src="/ndi%20brain.jpg"
-                    alt="Mr. Ndi Brain Webje"
-                    className="h-full w-full object-cover object-top"
+                <div className="relative h-20 w-20 sm:h-24 sm:w-24 overflow-hidden rounded-full border border-white/20 bg-black/40">
+                  <Image
+                    src="/ndi brain.jpg"
+                    alt="Mr. Ndi Brain Webje - Creative Director at Eva Helpful Foundation"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 640px) 80px, 96px"
                   />
                 </div>
                 <div className="space-y-1 text-sm sm:text-base">
@@ -521,11 +561,13 @@ export default function Home() {
                 href="/team/ndam-njoya-inusa"
                 className="glass-panel flex flex-col items-center gap-3 p-5 sm:p-6 text-center hover:bg-white/10 transition-colors"
               >
-                <div className="h-20 w-20 sm:h-24 sm:w-24 overflow-hidden rounded-full border border-white/20 bg-black/40">
-                  <img
-                    src="/ndam%20njoya.jpg"
-                    alt="Ndam Njoya Inusa"
-                    className="h-full w-full object-cover"
+                <div className="relative h-20 w-20 sm:h-24 sm:w-24 overflow-hidden rounded-full border border-white/20 bg-black/40">
+                  <Image
+                    src="/ndam njoya.jpg"
+                    alt="Ndam Njoya Inusa - Director of Grants Management at Eva Helpful Foundation"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 80px, 96px"
                   />
                 </div>
                 <div className="space-y-1 text-sm sm:text-base">
@@ -537,16 +579,18 @@ export default function Home() {
                 </div>
               </a>
 
-              {/* Coordinator  Digital Communications and Protocol */}
+              {/* Coordinator – Digital Communications and Protocol */}
               <a
                 href="/team/levi-wam-mfua"
                 className="glass-panel flex flex-col items-center gap-3 p-5 sm:p-6 text-center hover:bg-white/10 transition-colors"
               >
-                <div className="h-20 w-20 sm:h-24 sm:w-24 overflow-hidden rounded-full border border-white/20 bg-black/40">
-                  <img
-                    src="/lewi%20wam.png"
-                    alt="Levi Wam Mfua"
-                    className="h-full w-full object-cover object-top"
+                <div className="relative h-20 w-20 sm:h-24 sm:w-24 overflow-hidden rounded-full border border-white/20 bg-black/40">
+                  <Image
+                    src="/lewi wam.png"
+                    alt="Levi Wam Mfua - Digital Communications Coordinator at Eva Helpful Foundation"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 640px) 80px, 96px"
                   />
                 </div>
                 <div className="space-y-1 text-sm sm:text-base">
@@ -563,11 +607,13 @@ export default function Home() {
                 href="/team/ngoata-sylvanus-diangha"
                 className="glass-panel flex flex-col items-center gap-3 p-5 sm:p-6 text-center hover:bg-white/10 transition-colors"
               >
-                <div className="h-20 w-20 sm:h-24 sm:w-24 overflow-hidden rounded-full border border-white/20 bg-black/40">
-                  <img
+                <div className="relative h-20 w-20 sm:h-24 sm:w-24 overflow-hidden rounded-full border border-white/20 bg-black/40">
+                  <Image
                     src="/dr.diangha.png"
-                    alt="Dr. Ngoata Sylvanus Diangha"
-                    className="h-full w-full object-cover object-top"
+                    alt="Dr. Ngoata Sylvanus Diangha - Director of Research at Eva Helpful Foundation"
+                    fill
+                    className="object-cover object-top"
+                    sizes="(max-width: 640px) 80px, 96px"
                   />
                 </div>
                 <div className="space-y-1 text-sm sm:text-base">
@@ -728,10 +774,13 @@ export default function Home() {
                     key={i}
                     className="relative aspect-[4/3] overflow-hidden rounded-lg border border-white/10 bg-black/40"
                   >
-                    <img
+                    <Image
                       src={`/images/photo_${i + 1}_2025-12-03_18-28-46.jpg`}
-                      alt="Eva Helpful media preview"
-                      className="h-full w-full object-cover"
+                      alt={`Eva Helpful Foundation outreach activity photo ${i + 1}`}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 640px) 50vw, (max-width: 768px) 33vw, (max-width: 1024px) 25vw, 20vw"
+                      loading="lazy"
                     />
                   </div>
                 ))}

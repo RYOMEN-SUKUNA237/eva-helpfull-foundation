@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { FormEvent, useEffect, useState } from "react";
 import { FiMenu, FiX, FiSearch } from "react-icons/fi";
@@ -192,14 +193,17 @@ export function Navbar() {
         >
           <Link href="/" className="flex items-center gap-3">
             <div
-              className={`overflow-hidden rounded-lg border border-white/20 bg-black/40 transition-all duration-300 ${
+              className={`relative overflow-hidden rounded-lg border border-white/20 bg-black/40 transition-all duration-300 ${
                 scrolled ? "h-10 w-10" : "h-[100px] w-[100px]"
               }`}
             >
-              <img
+              <Image
                 src="/photo_2025-12-05_09-46-53.jpg"
                 alt="Eva Helpful Foundation logo"
-                className="h-full w-full object-cover"
+                fill
+                className="object-cover"
+                sizes={scrolled ? "40px" : "100px"}
+                priority
               />
             </div>
             <div className="leading-tight">

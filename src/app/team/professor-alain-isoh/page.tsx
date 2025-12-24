@@ -1,21 +1,90 @@
+import type { Metadata } from "next";
+import Image from "next/image";
 import { Navbar } from "@/components/layout/Navbar";
 import { BackgroundScene } from "@/components/three/BackgroundScene";
 import { FiBookOpen, FiAward, FiGlobe, FiUsers, FiHeart } from "react-icons/fi";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.evahelpful.org";
+
+export const metadata: Metadata = {
+  title: "Professor Alain Vilard Ndi Isoh | Founder & President",
+  description:
+    "Meet Professor Alain Vilard Ndi Isoh, Founder and President of Eva Helpful Foundation. An accomplished researcher, administrator, and educator dedicated to restoring moral values in Cameroon.",
+  keywords: [
+    "Professor Alain Isoh",
+    "Eva Helpful founder",
+    "values education leader Cameroon",
+    "ICT University Cameroon",
+    "youth empowerment leader",
+  ],
+  openGraph: {
+    title: "Professor Alain Vilard Ndi Isoh | Eva Helpful Foundation",
+    description:
+      "Founder and President of Eva Helpful Foundation, dedicated to restoring moral values and nurturing responsible future leaders.",
+    url: `${siteUrl}/team/professor-alain-isoh`,
+    siteName: "Eva Helpful Foundation",
+    locale: "en_US",
+    type: "profile",
+    images: [
+      {
+        url: `${siteUrl}/uppdate%20prof%20alain.jpeg`,
+        width: 400,
+        height: 400,
+        alt: "Professor Alain Vilard Ndi Isoh",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Professor Alain Vilard Ndi Isoh | Eva Helpful Foundation",
+    description: "Founder and President of Eva Helpful Foundation.",
+  },
+  alternates: {
+    canonical: `${siteUrl}/team/professor-alain-isoh`,
+  },
+};
+
+const personSchema = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Professor Alain Vilard Ndi Isoh",
+  jobTitle: "Founder & President",
+  worksFor: {
+    "@type": "NGO",
+    name: "Eva Helpful Foundation",
+  },
+  alumniOf: [
+    { "@type": "CollegeOrUniversity", name: "Cardiff Metropolitan University" },
+    { "@type": "CollegeOrUniversity", name: "University of Gloucestershire" },
+    { "@type": "CollegeOrUniversity", name: "University of Buea" },
+  ],
+  description:
+    "Professor Alain Vilard Ndi Isoh is an accomplished researcher, administrator, and educator with expertise in Business Management, Finance, and Public Sector Leadership.",
+  image: `${siteUrl}/uppdate%20prof%20alain.jpeg`,
+  url: `${siteUrl}/team/professor-alain-isoh`,
+};
+
 export default function ProfessorAlainIsohPage() {
   return (
     <div className="page-shell">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
       <BackgroundScene />
       <div className="page-shell-main">
         <Navbar />
         <main className="pt-24 pb-20 px-4 sm:px-6 lg:px-8 flex-1 flex flex-col">
           <section className="mx-auto flex w-full max-w-5xl flex-col gap-8">
             <div className="flex flex-col items-center gap-4 text-center">
-              <div className="h-32 w-32 sm:h-40 sm:w-40 overflow-hidden rounded-full border border-white/20 bg-black/40">
-                <img
-                  src="/uppdate%20prof%20alain.jpeg"
+              <div className="relative h-32 w-32 sm:h-40 sm:w-40 overflow-hidden rounded-full border border-white/20 bg-black/40">
+                <Image
+                  src="/uppdate prof alain.jpeg"
                   alt="Professor Alain Vilard Ndi Isoh"
-                  className="h-full w-full object-cover object-top"
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 640px) 128px, 160px"
+                  priority
                 />
               </div>
               <div>

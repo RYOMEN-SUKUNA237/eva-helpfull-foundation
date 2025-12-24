@@ -2,24 +2,122 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-const siteUrl = "https://example.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.evahelpful.org";
 
 export const metadata: Metadata = {
-  title: "The Future of Education: Integrating Emotional Intelligence in Schools | Eva Helpful Foundation",
+  title: "The Future of Education: Integrating Emotional Intelligence in Schools",
   description:
     "Is your child smart but unhappy? Discover why Social and Emotional Learning (SEL) is the missing link in Cameroonian schools and how it prevents violence and boosts success.",
+  keywords: [
+    "emotional intelligence in schools",
+    "social emotional learning SEL",
+    "SEL Cameroon",
+    "emotional intelligence education",
+    "school violence prevention",
+    "student mental health",
+    "character education schools",
+    "empathy in education",
+    "future of education Africa",
+    "student wellbeing programs",
+  ],
+  authors: [{ name: "Eva Helpful Foundation" }],
   openGraph: {
-    title: "The Future of Education: Integrating Emotional Intelligence in Schools | Eva Helpful Foundation",
+    title: "The Future of Education: Integrating Emotional Intelligence in Schools",
     description:
       "Is your child smart but unhappy? Discover why Social and Emotional Learning (SEL) is the missing link in Cameroonian schools and how it prevents violence and boosts success.",
     url: `${siteUrl}/blog/emotional-intelligence-in-schools`,
+    siteName: "Eva Helpful Foundation",
+    locale: "en_US",
     type: "article",
+    publishedTime: "2025-12-18T00:00:00.000Z",
+    authors: ["Eva Helpful Foundation"],
+    images: [
+      {
+        url: `${siteUrl}/images/sel-happy-students.jpg`,
+        width: 1200,
+        height: 630,
+        alt: "Happy African students participating in a classroom lesson in Cameroon",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Future of Education: Integrating Emotional Intelligence in Schools",
+    description:
+      "Why Social and Emotional Learning (SEL) is essential for safer, happier, and more successful schools.",
+    images: [`${siteUrl}/images/sel-happy-students.jpg`],
+  },
+  alternates: {
+    canonical: `${siteUrl}/blog/emotional-intelligence-in-schools`,
   },
 };
 
 export default function EmotionalIntelligenceBlogPost() {
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "The Future of Education: Integrating Emotional Intelligence in Schools",
+    description:
+      "Is your child smart but unhappy? Discover why Social and Emotional Learning (SEL) is the missing link in Cameroonian schools and how it prevents violence and boosts success.",
+    image: `${siteUrl}/images/sel-happy-students.jpg`,
+    author: {
+      "@type": "Organization",
+      name: "Eva Helpful Foundation",
+      url: siteUrl,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Eva Helpful Foundation",
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/photo_2025-12-05_09-46-53.jpg`,
+      },
+    },
+    datePublished: "2025-12-18T00:00:00.000Z",
+    dateModified: "2025-12-18T00:00:00.000Z",
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/blog/emotional-intelligence-in-schools`,
+    },
+    keywords:
+      "emotional intelligence in schools, social emotional learning SEL, SEL Cameroon, emotional intelligence education, school violence prevention",
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteUrl,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Blog",
+        item: `${siteUrl}/blog`,
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: "Emotional Intelligence in Schools",
+        item: `${siteUrl}/blog/emotional-intelligence-in-schools`,
+      },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-slate-950 text-slate-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-10 px-4 pb-36 pt-28 sm:px-6 lg:px-8">
         <div className="mb-2 flex justify-between text-[11px] sm:text-xs text-slate-300/80">
           <Link
@@ -143,7 +241,7 @@ export default function EmotionalIntelligenceBlogPost() {
                 How Eva Helpful is leading the way
               </h2>
               <p>
-                We are not waiting for the curriculum to change are bringing the change to the schools.
+                We are not waiting for the curriculum to change—we are bringing the change to the schools.
                 Through our outreach programs in Soa and Yaounde, we provide:
               </p>
               <ul className="ml-5 list-disc space-y-1">

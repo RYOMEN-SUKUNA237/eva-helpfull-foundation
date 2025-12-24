@@ -4,10 +4,32 @@ import { Navbar } from "@/components/layout/Navbar";
 import { BackgroundScene } from "@/components/three/BackgroundScene";
 import { DOCUMENTATIONS } from "@/data/documentations";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.evahelpful.org";
+
 export const metadata: Metadata = {
   title: "About Eva Helpful Foundation",
   description:
     "Learn about Eva Helpful Foundation's mission to promote essential values and character development in children and adolescents, and explore our official documentation.",
+  keywords: [
+    "about Eva Helpful",
+    "Eva Helpful Foundation mission",
+    "values education organization",
+    "nonprofit about us",
+    "who is Eva Helpful",
+    "Eva Helpful story",
+    "children charity Cameroon",
+    "youth organization Africa",
+    "character education nonprofit",
+    "moral values organization",
+    "child development charity",
+    "education foundation Cameroon",
+    "community nonprofit Yaounde",
+    "values-based organization",
+    "youth empowerment charity",
+  ],
+  alternates: {
+    canonical: `${siteUrl}/about`,
+  },
 };
 
 export default function AboutPage() {
