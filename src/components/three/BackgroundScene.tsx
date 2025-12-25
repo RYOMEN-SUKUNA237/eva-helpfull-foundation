@@ -41,7 +41,7 @@ export function BackgroundScene() {
           <img
             src={current}
             alt="Eva Helpful background"
-            className="h-full w-full object-cover opacity-50 blur-[2px]"
+            className="h-full w-full object-cover opacity-55 blur-[0.5px]"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-teal-950/70 to-black/90" />
         </div>
